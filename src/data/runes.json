@@ -1,0 +1,340 @@
+{
+  "runes": [
+    {
+      "name": "El",
+      "image": "assets/images/runes/El.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 11,
+      "weapon_bonus": ["+50 Attack Rating", "+1 Light Radius"],
+      "armor_helm_bonus": ["+15 Defense", "+1  Light Radius"],
+      "shield_bonus": ["+15 Defense", "+1  Light Radius"],
+      "recipe": "-"
+    },
+    {
+      "name": "Eld",
+      "image": "assets/images/runes/Eld.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 11,
+      "weapon_bonus": [
+        "+75% Damage To Undead",
+        "+50 Attack Rating Against Undead"
+      ],
+      "armor_helm_bonus": ["15% Slower Stamina Drain"],
+      "shield_bonus": ["+7% Block Chance"],
+      "recipe": "3 El"
+    },
+    {
+      "name": "Tir",
+      "image": "assets/images/runes/Tir.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 13,
+      "weapon_bonus": ["+2 Mana After Each Kill"],
+      "armor_helm_bonus": ["+2 Mana After Each Kill"],
+      "shield_bonus": ["+2 Mana After Each Kill"],
+      "recipe": "3 Eld"
+    },
+    {
+      "name": "Nef",
+      "image": "assets/images/runes/Nef.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 13,
+      "weapon_bonus": ["Knockback"],
+      "armor_helm_bonus": ["+30 Defense vs. Missiles"],
+      "shield_bonus": ["+30 Defense vs. Missiles"],
+      "recipe": "3 Tir"
+    },
+    {
+      "name": "Eth",
+      "image": "assets/images/runes/Eth.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 15,
+      "weapon_bonus": ["−25% Target Defense"],
+      "armor_helm_bonus": ["Regenerate Mana +15%"],
+      "shield_bonus": ["Regenerate Mana +15%"],
+      "recipe": "3 Nef"
+    },
+    {
+      "name": "Ith",
+      "image": "assets/images/runes/Ith.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 15,
+      "weapon_bonus": ["+9 Maximum Damage"],
+      "armor_helm_bonus": ["15% Damage Taken Goes To Mana"],
+      "shield_bonus": ["15% Damage Taken Goes To Mana"],
+      "recipe": "3 Eth"
+    },
+    {
+      "name": "Tal",
+      "image": "assets/images/runes/Tal.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 17,
+      "weapon_bonus": ["+75 Poison Damage Over 5 Seconds"],
+      "armor_helm_bonus": ["+30 Poison Resistance"],
+      "shield_bonus": ["+30 Poison Resistance"],
+      "recipe": "3 Ith"
+    },
+    {
+      "name": "Ral",
+      "image": "assets/images/runes/Ral.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 19,
+      "weapon_bonus": ["Adds 5-30 Fire Damage"],
+      "armor_helm_bonus": ["+30 Fire Resistance"],
+      "shield_bonus": ["+35 Fire Resistance"],
+      "recipe": "3 Tal"
+    },
+    {
+      "name": "Ort",
+      "image": "assets/images/runes/Ort.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 21,
+      "weapon_bonus": ["Adds 1-50 Lightning Damage"],
+      "armor_helm_bonus": ["+30 Lightning Resistance"],
+      "shield_bonus": ["+35 Lightning Resistance"],
+      "recipe": "3 Ral"
+    },
+    {
+      "name": "Thul",
+      "image": "assets/images/runes/Thul.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 23,
+      "weapon_bonus": ["Adds 3-14 Cold Damage"],
+      "armor_helm_bonus": ["+30 Cold Resistance"],
+      "shield_bonus": ["+35 Cold Resistance"],
+      "recipe": "3 Ort"
+    },
+    {
+      "name": "Amn",
+      "image": "assets/images/runes/Amn.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 26,
+      "weapon_bonus": ["Adds 3-14 Cold Damage"],
+      "armor_helm_bonus": ["+30 Cold Resistance"],
+      "shield_bonus": ["+35 Cold Resistance"],
+      "recipe": "3 Thul + Chipped Topaz"
+    },
+    {
+      "name": "Sol",
+      "image": "assets/images/runes/Sol.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 27,
+      "weapon_bonus": ["+9 Minimum Damage"],
+      "armor_helm_bonus": ["Damage Reduced By 7"],
+      "shield_bonus": ["Damage Reduced By 7"],
+      "recipe": "3 Amn + Chipped Amethyst"
+    },
+    {
+      "name": "Shael",
+      "image": "assets/images/runes/Shael.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 29,
+      "weapon_bonus": ["+20% Increased Attack Speed"],
+      "armor_helm_bonus": ["+20% Faster Hit Recovery"],
+      "shield_bonus": ["+20% Faster Block Rate"],
+      "recipe": "3 Sol + Chipped Sapphire"
+    },
+    {
+      "name": "Dol",
+      "image": "assets/images/runes/Dol.jpg",
+      "tier": "Low Rune",
+      "lvl_req": 31,
+      "weapon_bonus": ["Hit Causes Monsters To Flee 25%"],
+      "armor_helm_bonus": ["Replenish Life +7"],
+      "shield_bonus": ["Replenish Life +7"],
+      "recipe": "3 Shael + Chipped Ruby"
+    },
+    {
+      "name": "Hel",
+      "image": "assets/images/runes/Hel.jpg",
+      "tier": "Low Mid Rune",
+      "lvl_req": 33,
+      "weapon_bonus": ["-20% Requirements"],
+      "armor_helm_bonus": ["-15% Requirements"],
+      "shield_bonus": ["-15% Requirements"],
+      "recipe": "3 Dol + Chipped Emerald"
+    },
+    {
+      "name": "Io",
+      "image": "assets/images/runes/Io.jpg",
+      "tier": "Low Mid Rune",
+      "lvl_req": 35,
+      "weapon_bonus": ["+10 Vitality"],
+      "armor_helm_bonus": ["+10 Vitality"],
+      "shield_bonus": ["+10 Vitality"],
+      "recipe": "3 Hel + Chipped Diamond"
+    },
+    {
+      "name": "Lum",
+      "image": "assets/images/runes/Lum.jpg",
+      "tier": "Low Mid Rune",
+      "lvl_req": 37,
+      "weapon_bonus": ["+10 Energy"],
+      "armor_helm_bonus": ["+10 Energy"],
+      "shield_bonus": ["+10 Energy"],
+      "recipe": "3 Io + Flawed Topaz"
+    },
+    {
+      "name": "Ko",
+      "image": "assets/images/runes/Ko.jpg",
+      "tier": "Low Mid Rune",
+      "lvl_req": 39,
+      "weapon_bonus": ["+10 Dexterity"],
+      "armor_helm_bonus": ["+10 Dexterity"],
+      "shield_bonus": ["+10 Dexterity"],
+      "recipe": "3 Lum + Flawed Amethyst"
+    },
+    {
+      "name": "Fal",
+      "image": "assets/images/runes/Fal.jpg",
+      "tier": "Low Mid Rune",
+      "lvl_req": 41,
+      "weapon_bonus": ["+10 Strength"],
+      "armor_helm_bonus": ["+10 Strength"],
+      "shield_bonus": ["+10 Strength"],
+      "recipe": "3 Ko + Flawed Sapphire"
+    },
+    {
+      "name": "Lem",
+      "image": "assets/images/runes/Lem.jpg",
+      "tier": "Mid Rune",
+      "lvl_req": 43,
+      "weapon_bonus": ["75% Extra Gold from Monsters"],
+      "armor_helm_bonus": ["50% Extra Gold from Monsters"],
+      "shield_bonus": ["50% Extra Gold from Monsters"],
+      "recipe": "3 Fal + Flawed Ruby"
+    },
+    {
+      "name": "Pul",
+      "image": "assets/images/runes/Pul.jpg",
+      "tier": "Mid Rune",
+      "lvl_req": 45,
+      "weapon_bonus": [
+        "+75% Damage To Demons",
+        "+100 To Attack Rating Against Demons"
+      ],
+      "armor_helm_bonus": ["+30% Defense"],
+      "shield_bonus": ["+30% Defense"],
+      "recipe": "3 Lem + Flawed Emerald"
+    },
+    {
+      "name": "Um",
+      "image": "assets/images/runes/Um.jpg",
+      "tier": "Mid Rune",
+      "lvl_req": 47,
+      "weapon_bonus": ["25% Chance Of Open Wounds"],
+      "armor_helm_bonus": ["+15 Resist All"],
+      "shield_bonus": ["+22 Resist All"],
+      "recipe": "2 Pul + Flawed Diamond"
+    },
+    {
+      "name": "Mal",
+      "image": "assets/images/runes/Mal.jpg",
+      "tier": "Mid Rune",
+      "lvl_req": 49,
+      "weapon_bonus": ["Prevent Monster Heal"],
+      "armor_helm_bonus": ["Magic Damage Reduced By 7"],
+      "shield_bonus": ["Magic Damage Reduced By 7"],
+      "recipe": "2 Um + Topaz"
+    },
+    {
+      "name": "Ist",
+      "image": "assets/images/runes/Ist.jpg",
+      "tier": "Mid Rune",
+      "lvl_req": 51,
+      "weapon_bonus": ["+30% Better Chance Of Finding Magical Items"],
+      "armor_helm_bonus": ["+25% Better Chance Of Finding Magical Items"],
+      "shield_bonus": ["+25% Better Chance Of Finding Magical Items"],
+      "recipe": "2 Mal + Amethyst"
+    },
+    {
+      "name": "Gul",
+      "image": "assets/images/runes/Gul.jpg",
+      "tier": "High Rune",
+      "lvl_req": 53,
+      "weapon_bonus": ["20% Bonus To Attack Rating"],
+      "armor_helm_bonus": ["+5% To Maximum Poison Resist"],
+      "shield_bonus": ["+5% To Maximum Poison Resist"],
+      "recipe": "2 Ist + Sapphire"
+    },
+    {
+      "name": "Vex",
+      "image": "assets/images/runes/Vex.jpg",
+      "tier": "High Rune",
+      "lvl_req": 55,
+      "weapon_bonus": ["7% Mana Stolen Per Hit"],
+      "armor_helm_bonus": ["+5% To Maximum Fire Resist"],
+      "shield_bonus": ["+5% To Maximum Fire Resist"],
+      "recipe": "2 Gul + Ruby"
+    },
+    {
+      "name": "Ohm",
+      "image": "assets/images/runes/Ohm.jpg",
+      "tier": "High Rune",
+      "lvl_req": 57,
+      "weapon_bonus": ["+50% Enhanced Damage"],
+      "armor_helm_bonus": ["+5% To Maximum Cold Resist"],
+      "shield_bonus": ["+5% To Maximum Cold Resist"],
+      "recipe": "2 Vex + Emerald"
+    },
+    {
+      "name": "Lo",
+      "image": "assets/images/runes/Lo.jpg",
+      "tier": "High Rune",
+      "lvl_req": 59,
+      "weapon_bonus": ["20% Deadly Strike"],
+      "armor_helm_bonus": ["+5% To Maximum Lighting Resist"],
+      "shield_bonus": ["+5% To Maximum Lighting Resist"],
+      "recipe": "2 Ohm + Diamond"
+    },
+    {
+      "name": "Sur",
+      "image": "assets/images/runes/Sur.jpg",
+      "tier": "High Rune",
+      "lvl_req": 61,
+      "weapon_bonus": ["Hit Blinds Target"],
+      "armor_helm_bonus": ["Increase Maximum Mana 5%"],
+      "shield_bonus": ["+50 To Mana"],
+      "recipe": "2 Lo + Flawless Topaz"
+    },
+    {
+      "name": "Ber",
+      "image": "assets/images/runes/Ber.jpg",
+      "tier": "High Rune",
+      "lvl_req": 63,
+      "weapon_bonus": ["20% Crushing Blow"],
+      "armor_helm_bonus": ["Damage Reduced By 8%"],
+      "shield_bonus": ["Damage Reduced By 8%"],
+      "recipe": "2 Sur + Flawless Amethyst"
+    },
+    {
+      "name": "Jah",
+      "image": "assets/images/runes/Jah.jpg",
+      "tier": "High Rune",
+      "lvl_req": 65,
+      "weapon_bonus": ["Ignores Target Defense"],
+      "armor_helm_bonus": ["Increase Maximum Life 5%"],
+      "shield_bonus": ["+50 To Life"],
+      "recipe": "2 Ber + Flawless Sapphire"
+    },
+    {
+      "name": "Cham",
+      "image": "assets/images/runes/Cham.jpg",
+      "tier": "High Rune",
+      "lvl_req": 67,
+      "weapon_bonus": ["Freezes Target +3"],
+      "armor_helm_bonus": ["Cannot Be Frozen"],
+      "shield_bonus": ["Cannot Be Frozen"],
+      "recipe": "2 Ber + Flawless Ruby"
+    },
+    {
+      "name": "Zod",
+      "image": "assets/images/runes/Zod.jpg",
+      "tier": "High Rune",
+      "lvl_req": 69,
+      "weapon_bonus": ["Indestructible"],
+      "armor_helm_bonus": ["Indestructible"],
+      "shield_bonus": ["Indestructible"],
+      "recipe": "2 Ber + Flawless Emerald"
+    }
+  ]
+}
