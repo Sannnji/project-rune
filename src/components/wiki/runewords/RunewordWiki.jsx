@@ -15,15 +15,14 @@ export const RunewordWiki = () => {
 
   return (
     <SideMenu setCatagory={setCatagory}>
-      <SimpleGrid columns="4">
+      <SimpleGrid columns="5">
         {catagory.map((element, index) => (
           <Button
             key={index}
             bg="#090909"
             m={2}
-            px={6}
             py={6}
-            minW="218px"
+            maxW="180px"
             borderRadius="0"
             fontFamily="AvQest"
             onClick={() => {
@@ -35,10 +34,15 @@ export const RunewordWiki = () => {
             flexFlow="column"
           >
             <Text color="#C7B377">{element.name}</Text>
-            <Text color="#797979">'{element.rune_combo}'</Text>
+            <Text color="#797979">'{element.recipe}'</Text>
           </Button>
         ))}
-        <RunewordModal onClose={onClose} isOpen={isOpen} runeword={context.runeword} />
+
+        <RunewordModal
+          onClose={onClose}
+          isOpen={isOpen}
+          runeword={context.runeword}
+        />
       </SimpleGrid>
     </SideMenu>
   );

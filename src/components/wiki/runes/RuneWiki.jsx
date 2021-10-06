@@ -20,7 +20,7 @@ export const RuneWiki = () => {
           m={2}
           px={6}
           py={6}
-          minW="218px"
+
           borderRadius="0"
           fontFamily="AvQest"
           flexDir="column"

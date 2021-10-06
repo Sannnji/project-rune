@@ -5,6 +5,7 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "#151515",
+        fontFamily: "AvQest",
       },
     },
   },

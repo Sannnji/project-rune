@@ -5,7 +5,7 @@ import {
   ModalBody,
   ModalCloseButton,
   Text,
-  Image,
+  Image
 } from "@chakra-ui/react";
 
 export default function RuneModal({ rune, isOpen, onClose }) {
@@ -28,7 +28,13 @@ export default function RuneModal({ rune, isOpen, onClose }) {
               <Text textAlign="center" color="#C7B377" fontSize="24px">
                 {rune.name}
               </Text>
-              <Image src={process.env.PUBLIC_URL + `/${rune.image}`} my={4} />
+
+              <Image
+                src={process.env.PUBLIC_URL + `/${rune.image}`}
+                borderRadius="md"
+                my={4}
+              />
+
               <Text textAlign="center" color="#797979">
                 {rune.tier}
               </Text>
