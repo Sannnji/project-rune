@@ -3,7 +3,7 @@
     {
       "name": "Stealth",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Tal", "Eth"],
+      "recipe": ["Tal", "Eth"],
       "lvl_req": 17,
       "stats": [
         "Magic Damage Reduced By 3",
@@ -20,7 +20,7 @@
     {
       "name": "Myth",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Hel", "Amn", "Nef"],
+      "recipe": ["Hel", "Amn", "Nef"],
       "lvl_req": 25,
       "stats": [
         "3% Chance To Cast Level 1 Howl When Struck",
@@ -36,7 +36,7 @@
     {
       "name": "Peace",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Shael", "Thul", "Amn"],
+      "recipe": ["Shael", "Thul", "Amn"],
       "lvl_req": 29,
       "stats": [
         "4% Chance To Cast Level 5 Slow Missiles When Struck",
@@ -52,7 +52,7 @@
     {
       "name": "Smoke",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Nef", "Lum"],
+      "recipe": ["Nef", "Lum"],
       "lvl_req": 37,
       "stats": [
         "+75% Enhanced Defense",
@@ -68,7 +68,7 @@
     {
       "name": "Lionheart",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Hel", "Lum", "Fal"],
+      "recipe": ["Hel", "Lum", "Fal"],
       "lvl_req": 41,
       "stats": [
         "+20% Enhanced Damage",
@@ -85,7 +85,7 @@
     {
       "name": "Treachery",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Shael", "Thul", "Lem"],
+      "recipe": ["Shael", "Thul", "Lem"],
       "lvl_req": 43,
       "stats": [
         "5% Chance To Cast Level 15 Fade When Struck",
@@ -101,7 +101,7 @@
     {
       "name": "Wealth",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Lem", "Ko", "Tir"],
+      "recipe": ["Lem", "Ko", "Tir"],
       "lvl_req": 43,
       "stats": [
         "300% Extra Gold From Monsters",
@@ -114,7 +114,7 @@
     {
       "name": "Enlightenment",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Pul", "Ral", "Sol"],
+      "recipe": ["Pul", "Ral", "Sol"],
       "lvl_req": 45,
       "stats": [
         "5% Chance To Cast Level 15 Blaze When Struck",
@@ -130,7 +130,7 @@
     {
       "name": "Bone",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Sol", "Um", "Um"],
+      "recipe": ["Sol", "Um", "Um"],
       "lvl_req": 47,
       "stats": [
         "15% Chance To Cast level 10 Bone Armor When Struck",
@@ -145,7 +145,7 @@
     {
       "name": "Duress",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Shael", "Um", "Thul"],
+      "recipe": ["Shael", "Um", "Thul"],
       "lvl_req": 47,
       "stats": [
         "+40% Faster Hit Recovery",
@@ -165,7 +165,7 @@
     {
       "name": "Gloom",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Fal", "Um", "Pul"],
+      "recipe": ["Fal", "Um", "Pul"],
       "lvl_req": 47,
       "stats": [
         "15% Chance To Cast Level 3 Dim Vision When Struck",
@@ -182,7 +182,7 @@
     {
       "name": "Stone",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Shael", "Um", "Pul", "Lum"],
+      "recipe": ["Shael", "Um", "Pul", "Lum"],
       "lvl_req": 47,
       "stats": [
         "+60% Faster Hit Recovery",
@@ -200,7 +200,7 @@
     {
       "name": "Prudence",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Mal", "Tir"],
+      "recipe": ["Mal", "Tir"],
       "lvl_req": 49,
       "stats": [
         "+25% Faster Hit Recovery",
@@ -217,7 +217,7 @@
     {
       "name": "Rain",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Ort", "Mal", "Ith"],
+      "recipe": ["Ort", "Mal", "Ith"],
       "lvl_req": 49,
       "stats": [
         "5% Chance To Cast Level 15 Cyclone Armor When Struck",
@@ -233,7 +233,7 @@
     {
       "name": "Principle",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Ral", "Gul", "Eld"],
+      "recipe": ["Ral", "Gul", "Eld"],
       "lvl_req": 53,
       "stats": [
         "100% Chance To Cast Level 5 Holy Bolt On Striking",
@@ -247,7 +247,7 @@
     {
       "name": "Fortitude",
       "gear": ["Chest Armor"],
-      "rune_combo": ["El", "Sol", "Dol", "Lo"],
+      "recipe": ["El", "Sol", "Dol", "Lo"],
       "lvl_req": 59,
       "stats": [
         "20% Chance To Cast Level 15 Chilling Armor when Struck",
@@ -268,7 +268,7 @@
     {
       "name": "Bramble",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Ral", "Ohm", "Sur", "Eth"],
+      "recipe": ["Ral", "Ohm", "Sur", "Eth"],
       "lvl_req": 61,
       "stats": [
         "Level 15-21 Thorns Aura When Equipped",
@@ -288,7 +288,7 @@
     {
       "name": "Dragon",
       "gear": ["Chest Armor", "Shield"],
-      "rune_combo": ["Sur", "Lo", "Sol"],
+      "recipe": ["Sur", "Lo", "Sol"],
       "lvl_req": 61,
       "stats": [
         "20% Chance to Cast Level 18 Venom When Struck",
@@ -308,7 +308,7 @@
     {
       "name": "Chains of Honor",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Dol", "Um", "Ber", "Ist"],
+      "recipe": ["Dol", "Um", "Ber", "Ist"],
       "lvl_req": 63,
       "stats": [
         "+2 To All Skills",
@@ -327,7 +327,7 @@
     {
       "name": "Enigma",
       "gear": ["Chest Armor"],
-      "rune_combo": ["Jah", "Ith", "Ber"],
+      "recipe": ["Jah", "Ith", "Ber"],
       "lvl_req": 65,
       "stats": [
         "+2 To All Skills",
@@ -349,7 +349,7 @@
     {
       "name": "Nadir",
       "gear": ["Head Armor"],
-      "rune_combo": ["Nef", "Tir"],
+      "recipe": ["Nef", "Tir"],
       "lvl_req": 13,
       "stats": [
         "+50% Enhanced Defense",
@@ -366,7 +366,7 @@
     {
       "name": "Lore",
       "gear": ["Head Armor"],
-      "rune_combo": ["Ort", "Sol"],
+      "recipe": ["Ort", "Sol"],
       "lvl_req": 27,
       "stats": [
         "+1 To All Skill Levels",
@@ -381,7 +381,7 @@
     {
       "name": "Radiance",
       "gear": ["Head Armor"],
-      "rune_combo": ["Nef", "Sol", "Ith"],
+      "recipe": ["Nef", "Sol", "Ith"],
       "lvl_req": 27,
       "stats": [
         "+75% Enhanced Defense",
@@ -399,7 +399,7 @@
     {
       "name": "Delirium",
       "gear": ["Head Armor", "Shield"],
-      "rune_combo": ["Lem", "Ist", "Io"],
+      "recipe": ["Lem", "Ist", "Io"],
       "lvl_req": 51,
       "stats": [
         "1% Chance To Cast Level 50 Delirium When Struck",
@@ -418,7 +418,7 @@
     {
       "name": "Dream",
       "gear": ["Head Armor", "Shield"],
-      "rune_combo": ["Io", "Jah", "Pul"],
+      "recipe": ["Io", "Jah", "Pul"],
       "lvl_req": 65,
       "stats": [
         "10% Chance To Cast Level 15 Confuse When Struck",
@@ -440,7 +440,7 @@
     {
       "name": "Ancient's Pledge",
       "gear": "Shield",
-      "rune_combo": ["Ral", "Ort", "Tal"],
+      "recipe": ["Ral", "Ort", "Tal"],
       "lvl_req": 21,
       "stats": [
         "+50% Enhanced Defense",
@@ -455,7 +455,7 @@
     {
       "name": "Spirit (Shield Ver.)",
       "gear": ["Shield", "Sword"],
-      "rune_combo": ["Tal", "Thul", "Ort", "Amn"],
+      "recipe": ["Tal", "Thul", "Ort", "Amn"],
       "lvl_req": 25,
       "stats": [
         "+2 To All Skills",
@@ -475,7 +475,7 @@
     {
       "name": "Rhyme",
       "gear": ["Shield"],
-      "rune_combo": ["Shael", "Eth"],
+      "recipe": ["Shael", "Eth"],
       "lvl_req": 29,
       "stats": [
         "20% Increased Chance of Blocking",
@@ -491,7 +491,7 @@
     {
       "name": "Splendor",
       "gear": ["Shield"],
-      "rune_combo": ["Eth", "Lum"],
+      "recipe": ["Eth", "Lum"],
       "lvl_req": 37,
       "stats": [
         "+1 To All Skills",
@@ -509,7 +509,7 @@
     {
       "name": "Sanctuary",
       "gear": ["Shield"],
-      "rune_combo": ["Ko", "Ko", "Mal"],
+      "recipe": ["Ko", "Ko", "Mal"],
       "lvl_req": 49,
       "stats": [
         "+20% Faster Hit Recovery",
@@ -527,7 +527,7 @@
     {
       "name": "Delirium",
       "gear": ["Shield", "Head Armor"],
-      "rune_combo": ["Lem", "Ist", "Io"],
+      "recipe": ["Lem", "Ist", "Io"],
       "lvl_req": 51,
       "stats": [
         "1% Chance To Cast Level 50 Delirium When Struck",
@@ -546,7 +546,7 @@
     {
       "name": "Exile",
       "gear": ["Shield"],
-      "rune_combo": ["Vex", "Ohm", "Ist", "Dol"],
+      "recipe": ["Vex", "Ohm", "Ist", "Dol"],
       "lvl_req": 57,
       "stats": [
         "Paladin Only",
@@ -567,7 +567,7 @@
     {
       "name": "Dragon",
       "gear": ["Shield", "Chest Armor"],
-      "rune_combo": ["Sur", "Lo", "Sol"],
+      "recipe": ["Sur", "Lo", "Sol"],
       "lvl_req": 61,
       "stats": [
         "20% Chance to Cast Level 18 Venom When Struck",
@@ -587,7 +587,7 @@
     {
       "name": "Phoenix",
       "gear": ["Shield", "Specific Weapons"],
-      "rune_combo": ["Vex", "Vex", "Lo", "Jah"],
+      "recipe": ["Vex", "Vex", "Lo", "Jah"],
       "lvl_req": 65,
       "stats": [
         "100% Chance To Cast level 40 Blaze When You Level Up",
@@ -609,7 +609,7 @@
     {
       "name": "Steel",
       "gear": ["Axe", "Mace", "Sword"],
-      "rune_combo": ["Tir", "El"],
+      "recipe": ["Tir", "El"],
       "lvl_req": 13,
       "stats": [
         "20% Enhanced Damage",
@@ -637,7 +637,7 @@
         "Sword",
         "Melee Weapons"
       ],
-      "rune_combo": ["Ith", "El", "Eth"],
+      "recipe": ["Ith", "El", "Eth"],
       "lvl_req": 15,
       "stats": [
         "+33% Enhanced Damage",
@@ -654,7 +654,7 @@
     {
       "name": "Leaf",
       "gear": ["Staff"],
-      "rune_combo": ["Tir", "Ral"],
+      "recipe": ["Tir", "Ral"],
       "lvl_req": 19,
       "stats": [
         "Adds 5-30 Fire Damage",
@@ -671,7 +671,7 @@
     {
       "name": "Zephyr",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Ort", "Eth"],
+      "recipe": ["Ort", "Eth"],
       "lvl_req": 21,
       "stats": [
         "+33% Enhanced Damage",
@@ -688,7 +688,7 @@
     {
       "name": "Holy Thunder",
       "gear": ["Scepter"],
-      "rune_combo": ["Eth", "Ral", "Ort", "Tal"],
+      "recipe": ["Eth", "Ral", "Ort", "Tal"],
       "lvl_req": 23,
       "stats": [
         "+60% Enhanced Damage",
@@ -707,7 +707,7 @@
     {
       "name": "Edge",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Tir", "Tal", "Amn"],
+      "recipe": ["Tir", "Tal", "Amn"],
       "lvl_req": 25,
       "stats": [
         "Level 15 Thorns Aura When Equipped",
@@ -726,7 +726,7 @@
     {
       "name": "King's Grace",
       "gear": ["Scepter", "Sword"],
-      "rune_combo": ["Amn", "Ral", "Thul"],
+      "recipe": ["Amn", "Ral", "Thul"],
       "lvl_req": 25,
       "stats": [
         "+100% Enhanced Damage",
@@ -744,7 +744,7 @@
     {
       "name": "Spirit (Sword Ver.)",
       "gear": ["Sword", "Shield"],
-      "rune_combo": ["Tal", "Thul", "Ort", "Amn"],
+      "recipe": ["Tal", "Thul", "Ort", "Amn"],
       "lvl_req": 25,
       "stats": [
         "+2 To All Skills",
@@ -776,7 +776,7 @@
         "Wand",
         "Melee Weapons"
       ],
-      "rune_combo": ["Amn", "Tir"],
+      "recipe": ["Amn", "Tir"],
       "lvl_req": 25,
       "stats": [
         "35% Enhanced Damage",
@@ -800,7 +800,7 @@
         "Sword",
         "Melee Weapons"
       ],
-      "rune_combo": ["Amn", "El", "Ith", "Tir", "Sol"],
+      "recipe": ["Amn", "El", "Ith", "Tir", "Sol"],
       "lvl_req": 27,
       "stats": [
         "+160% Enhanced Damage",
@@ -820,7 +820,7 @@
     {
       "name": "Insight",
       "gear": ["Polearm", "Staff"],
-      "rune_combo": ["Ral", "Tir", "Tal", "Sol"],
+      "recipe": ["Ral", "Tir", "Tal", "Sol"],
       "lvl_req": 27,
       "stats": [
         "Level 12-17 Meditation Aura When Equipped",
@@ -840,7 +840,7 @@
     {
       "name": "Black",
       "gear": ["Club", "Hammer", "Mace"],
-      "rune_combo": ["Thul", "Io", "Nef"],
+      "recipe": ["Thul", "Io", "Nef"],
       "lvl_req": 35,
       "stats": [
         "+120% to Enhanced Damage",
@@ -858,7 +858,7 @@
     {
       "name": "White",
       "gear": ["Wand"],
-      "rune_combo": ["Dol", "Io"],
+      "recipe": ["Dol", "Io"],
       "lvl_req": 35,
       "stats": [
         "Hit Causes Monster To Flee 25%",
@@ -876,7 +876,7 @@
     {
       "name": "Memory",
       "gear": ["Staff"],
-      "rune_combo": ["Lum", "Io", "Sol", "Eth"],
+      "recipe": ["Lum", "Io", "Sol", "Eth"],
       "lvl_req": 37,
       "stats": [
         "+3 to Sorceress Skill Levels",
@@ -896,7 +896,7 @@
     {
       "name": "Harmony",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Tir", "Ith", "Sol", "Ko"],
+      "recipe": ["Tir", "Ith", "Sol", "Ko"],
       "lvl_req": 39,
       "stats": [
         "Level 10 Vigor Aura When Equipped",
@@ -918,7 +918,7 @@
     {
       "name": "Melody",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Shael", "Ko", "Nef"],
+      "recipe": ["Shael", "Ko", "Nef"],
       "lvl_req": 39,
       "stats": [
         "+50% Enhanced Damage",
@@ -936,7 +936,7 @@
     {
       "name": "Obedience",
       "gear": ["Polearm"],
-      "rune_combo": ["Hel", "Ko", "Thul", "Eth", "Fal"],
+      "recipe": ["Hel", "Ko", "Thul", "Eth", "Fal"],
       "lvl_req": 41,
       "stats": [
         "30% Chance To Cast Level 21 Enchant When You Kill An Enemy",
@@ -957,7 +957,7 @@
     {
       "name": "Lawbringer",
       "gear": ["Hammer", "Scepter", "Sword"],
-      "rune_combo": ["Amn", "Lem", "Ko"],
+      "recipe": ["Amn", "Lem", "Ko"],
       "lvl_req": 43,
       "stats": [
         "Required Level: 43",
@@ -987,7 +987,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Dol", "Ort", "Eld", "Lem"],
+      "recipe": ["Dol", "Ort", "Eld", "Lem"],
       "lvl_req": 43,
       "stats": [
         "+25% Increased Attack Speed",
@@ -1008,7 +1008,7 @@
     {
       "name": "Voice of Reason",
       "gear": ["Mace", "Sword"],
-      "rune_combo": ["Lem", "Ko", "El", "Eld"],
+      "recipe": ["Lem", "Ko", "El", "Eld"],
       "lvl_req": 43,
       "stats": [
         "15% Chance To Cast Level 13 Frozen Orb On Striking",
@@ -1029,7 +1029,7 @@
     {
       "name": "Crescent Moon",
       "gear": ["Axe", "Polearm", "Sword"],
-      "rune_combo": ["Shael", "Um", "Tir"],
+      "recipe": ["Shael", "Um", "Tir"],
       "lvl_req": 47,
       "stats": [
         "10% Chance To Cast Level 17 Chain Lightning On Striking",
@@ -1061,7 +1061,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Tal", "Dol", "Mal"],
+      "recipe": ["Tal", "Dol", "Mal"],
       "lvl_req": 49,
       "stats": [
         "Hit Causes Monster To Flee 25%",
@@ -1077,7 +1077,7 @@
     {
       "name": "Kingslayer",
       "gear": ["Axe", "Sword"],
-      "rune_combo": ["Mal", "Um", "Gul", "Fal"],
+      "recipe": ["Mal", "Um", "Gul", "Fal"],
       "lvl_req": 53,
       "stats": [
         "+30% Increased Attack Speed",
@@ -1096,7 +1096,7 @@
     {
       "name": "Rift",
       "gear": ["Polearms", "Scepters"],
-      "rune_combo": ["Hel", "Ko", "Lem", "Gul"],
+      "recipe": ["Hel", "Ko", "Lem", "Gul"],
       "lvl_req": 53,
       "stats": [
         "20% Chance To Cast Level 16 Tornado On Striking",
@@ -1116,7 +1116,7 @@
     {
       "name": "Death",
       "gear": ["Axe", "Sword"],
-      "rune_combo": ["Hel", "El", "Vex", "Ort", "Gul"],
+      "recipe": ["Hel", "El", "Vex", "Ort", "Gul"],
       "lvl_req": 55,
       "stats": [
         "100% Chance To Cast Level 44 Chain Lightning When You Die",
@@ -1138,7 +1138,7 @@
     {
       "name": "Heart of the Oak",
       "gear": ["Mace", "Staff"],
-      "rune_combo": ["Ko", "Vex", "Pul", "Thul"],
+      "recipe": ["Ko", "Vex", "Pul", "Thul"],
       "lvl_req": 55,
       "stats": [
         "+3 To All Skills",
@@ -1169,7 +1169,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Dol", "Eld", "Hel", "Ist", "Tir", "Vex"],
+      "recipe": ["Dol", "Eld", "Hel", "Ist", "Tir", "Vex"],
       "lvl_req": 55,
       "stats": [
         "200% Enhanced Damage",
@@ -1200,7 +1200,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Amn", "Ral", "Mal", "Ist", "Ohm"],
+      "recipe": ["Amn", "Ral", "Mal", "Ist", "Ohm"],
       "lvl_req": 57,
       "stats": [
         "+1 To All Skills",
@@ -1220,7 +1220,7 @@
     {
       "name": "Chaos",
       "gear": ["Claw"],
-      "rune_combo": ["Fal", "Ohm", "Um"],
+      "recipe": ["Fal", "Ohm", "Um"],
       "lvl_req": 57,
       "stats": [
         "9% Chance To Cast Level 11 Frozen Orb On Striking",
@@ -1248,7 +1248,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["El", "Sol", "Dol", "Lo"],
+      "recipe": ["El", "Sol", "Dol", "Lo"],
       "lvl_req": 59,
       "stats": [
         "20% Chance To Cast Level 15 Chilling Armor when Struck",
@@ -1269,7 +1269,7 @@
     {
       "name": "Grief",
       "gear": ["Axe", "Sword"],
-      "rune_combo": ["Eth", "Tir", "Lo", "Mal", "Ral"],
+      "recipe": ["Eth", "Tir", "Lo", "Mal", "Ral"],
       "lvl_req": 59,
       "stats": [
         "35% Chance To Cast Level 15 Venom On Striking",
@@ -1290,7 +1290,7 @@
     {
       "name": "Oath",
       "gear": ["Axe", "Mace", "Sword"],
-      "rune_combo": ["Shael", "Pul", "Mal", "Lum"],
+      "recipe": ["Shael", "Pul", "Mal", "Lum"],
       "lvl_req": 59,
       "stats": [
         "30% Chance To Cast Level 20 Bone Spirit On Striking",
@@ -1322,7 +1322,7 @@
         "Wand",
         "Melee Weapons"
       ],
-      "rune_combo": ["Sur", "El"],
+      "recipe": ["Sur", "El"],
       "lvl_req": 61,
       "stats": [
         "10% Chance To Cast Level 9 Tornado On Striking",
@@ -1341,7 +1341,7 @@
     {
       "name": "Beast",
       "gear": ["Axe", "Hammer", "Scepter"],
-      "rune_combo": ["Ber", "Tir", "Um", "Mal", "Lum"],
+      "recipe": ["Ber", "Tir", "Um", "Mal", "Lum"],
       "lvl_req": 63,
       "stats": [
         "Level 9 Fanaticism Aura When Equipped",
@@ -1371,7 +1371,7 @@
         "Sword",
         "Melee Weapons"
       ],
-      "rune_combo": ["Amn", "Ber", "Ist", "Sol", "Sur"],
+      "recipe": ["Amn", "Ber", "Ist", "Sol", "Sur"],
       "lvl_req": 63,
       "stats": [
         "Indestructible",
@@ -1392,7 +1392,7 @@
     {
       "name": "Infinity",
       "gear": ["Polearm"],
-      "rune_combo": ["Ber", "Mal", "Ber", "Ist"],
+      "recipe": ["Ber", "Mal", "Ber", "Ist"],
       "lvl_req": 63,
       "stats": [
         "50% Chance To Cast Level 20 Chain Lightning When You Kill An Enemy",
@@ -1411,7 +1411,7 @@
     {
       "name": "Wrath",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Pul", "Lum", "Ber", "Mal"],
+      "recipe": ["Pul", "Lum", "Ber", "Mal"],
       "lvl_req": 63,
       "stats": [
         "30% Chance To Cast Level 1 Decrepify On Striking",
@@ -1431,7 +1431,7 @@
     {
       "name": "Brand",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Jah", "Lo", "Mal", "Gul"],
+      "recipe": ["Jah", "Lo", "Mal", "Gul"],
       "lvl_req": 65,
       "stats": [
         "35% Chance To Cast Level 14 Amplify Damage When Struck",
@@ -1451,7 +1451,7 @@
     {
       "name": "Destruction",
       "gear": ["Polearm", "Sword"],
-      "rune_combo": ["Vex", "Lo", "Ber", "Jah", "Ko"],
+      "recipe": ["Vex", "Lo", "Ber", "Jah", "Ko"],
       "lvl_req": 65,
       "stats": [
         "23% Chance To Cast Level 12 Volcano On Striking",
@@ -1472,7 +1472,7 @@
     {
       "name": "Faith",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Ohm", "Jah", "Lem", "Eld"],
+      "recipe": ["Ohm", "Jah", "Lem", "Eld"],
       "lvl_req": 65,
       "stats": [
         "Level 12-15 Fanaticism Aura When Equipped",
@@ -1492,7 +1492,7 @@
     {
       "name": "Famine",
       "gear": ["Axe", "Hammer"],
-      "rune_combo": ["Fal", "Ohm", "Ort", "Jah"],
+      "recipe": ["Fal", "Ohm", "Ort", "Jah"],
       "lvl_req": 65,
       "stats": [
         "30% Increased Attack Speed",
@@ -1522,7 +1522,7 @@
         "Sword",
         "Melee Weapons"
       ],
-      "rune_combo": ["Jah", "Gul", "Eth"],
+      "recipe": ["Jah", "Gul", "Eth"],
       "lvl_req": 65,
       "stats": [
         "+209% Enhanced Damage",
@@ -1541,7 +1541,7 @@
     {
       "name": "Ice",
       "gear": ["Missile Weapons"],
-      "rune_combo": ["Amn", "Shael", "Jah", "Lo"],
+      "recipe": ["Amn", "Shael", "Jah", "Lo"],
       "lvl_req": 65,
       "stats": [
         "100% Chance To Cast Level 40 Blizzard On Level-up",
@@ -1561,7 +1561,7 @@
     {
       "name": "Last Wish",
       "gear": ["Axe", "Hammer", "Sword"],
-      "rune_combo": ["Jah", "Mal", "Jah", "Sur", "Jah", "Ber"],
+      "recipe": ["Jah", "Mal", "Jah", "Sur", "Jah", "Ber"],
       "lvl_req": 65,
       "stats": [
         "6% Chance To Cast Level 11 Fade When Struck",
@@ -1591,7 +1591,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Vex", "Vex", "Lo", "Jah"],
+      "recipe": ["Vex", "Vex", "Lo", "Jah"],
       "lvl_req": 65,
       "stats": [
         "100% Chance To Cast level 40 Blaze When You Level Up",
@@ -1610,7 +1610,7 @@
     {
       "name": "Doom",
       "gear": ["Axe", "Hammer", "Polearm"],
-      "rune_combo": ["Hel", "Ohm", "Um", "Lo", "Cham"],
+      "recipe": ["Hel", "Ohm", "Um", "Lo", "Cham"],
       "lvl_req": 67,
       "stats": [
         "5% Chance To Cast Level 18 Volcano On Striking",
@@ -1640,7 +1640,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Sur", "Cham", "Amn", "Lo"],
+      "recipe": ["Sur", "Cham", "Amn", "Lo"],
       "lvl_req": 67,
       "stats": [
         "100% Chance To Cast Level 36 Blaze When You Level-Up",
@@ -1660,7 +1660,7 @@
     {
       "name": "Pride",
       "gear": ["Polearm"],
-      "rune_combo": ["Cham", "Sur", "Io", "Lo"],
+      "recipe": ["Cham", "Sur", "Io", "Lo"],
       "lvl_req": 67,
       "stats": [
         "25% Chance To Cast Level 17 Fire Wall When Struck",
@@ -1689,7 +1689,7 @@
         "Melee Weapons",
         "Missile Weapons"
       ],
-      "rune_combo": ["Vex", "Hel", "El", "Eld", "Zod", "Eth"],
+      "recipe": ["Vex", "Hel", "El", "Eld", "Zod", "Eth"],
       "lvl_req": 69,
       "stats": [
         "50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy",

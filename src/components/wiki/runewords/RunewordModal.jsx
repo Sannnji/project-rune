@@ -31,7 +31,7 @@ export default function RunewordModal({ runeword, isOpen, onClose }) {
                   return `${gear}` + ` `;
                 })}
               </Text>
-              <Text color="#C7B377">'{runeword.rune_combo}'</Text>
+              <Text color="#C7B377">'{runeword.recipe}'</Text>
               <Text color="white">Required Level: {runeword.lvl_req}</Text>
               {runeword.stats.map((stat) => {
                 return <Text color="#6969FF">{stat}</Text>;
