@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function RunewordModal({ runeword, isOpen, onClose }) {
-
   if (runeword == null) {
     return <div />;
   } else {
@@ -26,15 +25,22 @@ export default function RunewordModal({ runeword, isOpen, onClose }) {
               <Text textAlign="center" color="#C7B377" fontSize="24px">
                 {runeword.name}
               </Text>
+              
               <Text color="#797979">
                 {runeword.gear.map((gear) => {
-                  return `${gear}` + ` `;
+                  return gear + " ";
                 })}
               </Text>
+
               <Text color="#C7B377">'{runeword.recipe}'</Text>
+
               <Text color="white">Required Level: {runeword.lvl_req}</Text>
-              {runeword.stats.map((stat) => {
-                return <Text color="#6969FF">{stat}</Text>;
+              {runeword.stats.map((stat, index) => {
+                return (
+                  <Text key={index} color="#6969FF">
+                    {stat}
+                  </Text>
+                );
               })}
             </ModalBody>
           </ModalContent>

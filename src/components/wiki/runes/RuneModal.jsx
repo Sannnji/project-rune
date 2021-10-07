@@ -9,8 +9,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function RuneModal({ rune, isOpen, onClose }) {
-  console.log(rune);
-
   if (rune == null) {
     return <div />;
   } else {
