@@ -9,7 +9,7 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
 
   return (
     <Flex
-      fontFamily="exocet"
+      fontFamily="AvQest"
       color="white"
       justifyContent={{ base: "space-evenly", md: "normal" }}
     >
@@ -18,8 +18,9 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
           return (
             <Text
               key={index}
-              textAlign="start"
               mb={2}
+              textAlign="start"
+              fontSize="22px"
               color={currentFilter === filter ? "#6969FF" : "white"}
               onClick={() => {
                 setFilter(filter);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavLink = ({ href, linkName }) => {
   return (
-    <Box mx={2}>
+    <Box mx={2} fontFamily="AvQest">
       <Link to={href}>{linkName}</Link>
     </Box>
   );
@@ -16,14 +16,13 @@ export default function Navbar() {
       py={4}
       px={{ base: 4, md: 12 }}
       zIndex={1}
-      fontFamily="exocet"
       justifyContent="space-between"
       color="white"
       bg="#090909"
       boxShadow="lg"
     >
       <Link to="/">
-        <Text>Project Runes</Text>
+        <Text fontFamily="exocet">Project Runes</Text>
       </Link>
 
       <Flex>
