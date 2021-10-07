@@ -11,8 +11,6 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
     <Flex
       fontFamily="exocet"
       color="white"
-      align="center"
-      alignItems="baseline"
       justifyContent={{ base: "space-evenly", md: "normal" }}
     >
       <Flex flexDir="column" align="baseline" mr={{ base: 4, md: 12 }}>
