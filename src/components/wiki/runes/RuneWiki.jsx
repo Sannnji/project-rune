@@ -3,7 +3,7 @@ import { SimpleGrid, Button, Text, useDisclosure } from "@chakra-ui/react";
 
 import RUNE_DATA from "../../../data/runes.json";
 import RuneModal from "./RuneModal";
-import SideMenu from "../SideMenu";
+import SideMenu from "../../SideMenu";
 
 export const RuneWiki = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();

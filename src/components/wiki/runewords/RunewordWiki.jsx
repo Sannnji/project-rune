@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, useDisclosure, Text, SimpleGrid } from "@chakra-ui/react";
 
 import RUNEWORD_DATA from "../../../data/runewords.json";
-import SideMenu from "../SideMenu";
+import SideMenu from "../../SideMenu";
 import RunewordModal from "./RunewordModal";
 
 export const RunewordWiki = () => {
