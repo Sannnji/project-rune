@@ -12,16 +12,16 @@ export const RuneWiki = () => {
   const [filter, setFilter] = useState(Object.keys(RUNE_DATA)[0]);
 
   return (
-    <SideMenu DATA={RUNE_DATA} setFilter={setFilter}>
-      <SimpleGrid columns="5">
+    <SideMenu DATA={RUNE_DATA} setFilter={setFilter} currentFilter={filter}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 4 }}>
         {RUNE_DATA[filter].map((rune, index) => {
           return (
             <Button
               key={index}
               bg="#090909"
               m={2}
-              px={6}
               py={6}
+              width="218px"
               borderRadius="0"
               fontFamily="AvQest"
               flexDir="column"

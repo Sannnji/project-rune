@@ -1,10 +1,10 @@
 import { Flex, Text } from "@chakra-ui/react";
 
-export default function SideMenu({ children, DATA, setFilter }) {
-  const filter = [];
+export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
+  const filters = [];
 
   for (const tier in DATA) {
-    filter.push(tier);
+    filters.push(tier);
   }
 
   return (
@@ -13,19 +13,22 @@ export default function SideMenu({ children, DATA, setFilter }) {
       color="white"
       align="center"
       alignItems="baseline"
+      justifyContent={{ base: "space-evenly", md: "normal" }}
     >
-      <Flex flexDir="column" align="baseline" mr={4}>
-        {filter.map((catagory, index) => {
+      <Flex flexDir="column" align="baseline" mr={{ base: 4, md: 12 }}>
+        {filters.map((filter, index) => {
           return (
             <Text
               key={index}
               textAlign="start"
               mb={2}
+              color={currentFilter === filter ? "#6969FF" : "white"}
               onClick={() => {
-                setFilter(catagory);
+                setFilter(filter);
               }}
+              cursor="pointer"
             >
-              {catagory}
+              {filter.replace(/_/g, " ")}
             </Text>
           );
         })}

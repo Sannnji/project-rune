@@ -12,15 +12,15 @@ export const RunewordWiki = () => {
   const [filter, setFilter] = useState(Object.keys(RUNEWORD_DATA)[0]);
 
   return (
-    <SideMenu DATA={RUNEWORD_DATA} setFilter={setFilter}>
-      <SimpleGrid columns="4">
+    <SideMenu DATA={RUNEWORD_DATA} setFilter={setFilter} currentFilter={filter}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 4 }}>
         {RUNEWORD_DATA[filter].map((runeword, index) => (
           <Button
             key={index}
             bg="#090909"
             m={2}
             py={6}
-            maxW="180px"
+            width="218px"
             borderRadius="0"
             fontFamily="AvQest"
             onClick={() => {
@@ -33,9 +33,9 @@ export const RunewordWiki = () => {
             <Text color="#797979">'{runeword.recipe}'</Text>
           </Button>
         ))}
-
-        <RunewordModal onClose={onClose} isOpen={isOpen} runeword={runeword} />
       </SimpleGrid>
+
+      <RunewordModal onClose={onClose} isOpen={isOpen} runeword={runeword} />
     </SideMenu>
   );
 };

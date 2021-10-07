@@ -33,7 +33,7 @@ export default function Wiki() {
           <TabPanel p={0}>
             <RunewordWiki />
           </TabPanel>
-          <TabPanel>
+          <TabPanel p={0}>
             <RuneWiki />
           </TabPanel>
         </TabPanels>

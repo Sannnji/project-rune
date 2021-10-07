@@ -14,7 +14,7 @@ export default function Navbar() {
     <Flex
       width="100%"
       py={4}
-      px={12}
+      px={{ base: 4, md: 12 }}
       zIndex={1}
       fontFamily="exocet"
       justifyContent="space-between"
