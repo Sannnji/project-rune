@@ -15,14 +15,15 @@ export default function Wiki() {
         >
           <Tab
             _focus={{ outline: "none", boxShadow: "none" }}
-            _selected={{ color: "#6969FF", bg: "#090909" }}
+            _selected={{ color: "#950101", bg: "#090909" }}
+            
             borderRadius="md"
           >
             Runewords
           </Tab>
           <Tab
             _focus={{ outline: "none", boxShadow: "none" }}
-            _selected={{ color: "#6969FF", bg: "#090909" }}
+            _selected={{ color: "#950101", bg: "#090909" }}
             borderRadius="md"
           >
             Runes

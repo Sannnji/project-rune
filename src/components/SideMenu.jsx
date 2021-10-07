@@ -21,7 +21,7 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
               mb={2}
               textAlign="start"
               fontSize="22px"
-              color={currentFilter === filter ? "#6969FF" : "white"}
+              color={currentFilter === filter ? "#950101" : "white"}
               onClick={() => {
                 setFilter(filter);
               }}
