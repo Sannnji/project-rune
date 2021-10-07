@@ -1,5 +1,5 @@
 {
-  "runes": [
+  "low_runes": [
     {
       "name": "El",
       "image": "assets/images/runes/El.jpg",
@@ -142,7 +142,10 @@
       "armor_helm_bonus": ["Replenish Life +7"],
       "shield_bonus": ["Replenish Life +7"],
       "recipe": "3 Shael + Chipped Ruby"
-    },
+    }
+  ],
+
+  "low_mid_rune": [
     {
       "name": "Hel",
       "image": "assets/images/runes/Hel.jpg",
@@ -192,7 +195,10 @@
       "armor_helm_bonus": ["+10 Strength"],
       "shield_bonus": ["+10 Strength"],
       "recipe": "3 Ko + Flawed Sapphire"
-    },
+    }
+  ],
+
+  "mid_rune": [
     {
       "name": "Lem",
       "image": "assets/images/runes/Lem.jpg",
@@ -245,7 +251,10 @@
       "armor_helm_bonus": ["+25% Better Chance Of Finding Magical Items"],
       "shield_bonus": ["+25% Better Chance Of Finding Magical Items"],
       "recipe": "2 Mal + Amethyst"
-    },
+    }
+  ],
+
+  "high_rune": [
     {
       "name": "Gul",
       "image": "assets/images/runes/Gul.jpg",
