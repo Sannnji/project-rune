@@ -106,10 +106,10 @@ export default function Inventory() {
   };
 
   return (
-    <Flex flexDir="row" justifyContent="space-evenly" mt={8}>
+    <Flex flexDir="row" mt={8}>
       <Box color="white">
-        <Text mb={4} fontFamily="exocet">
-          Rune Sack
+        <Text mb={4} fontFamily="exocet" fontSize={24}>
+          Inventory
         </Text>
         <SideMenu DATA={RUNE_DATA} setFilter={setFilter} currentFilter={filter}>
           <SimpleGrid columns={3}>
@@ -127,13 +127,25 @@ export default function Inventory() {
         </SideMenu>
       </Box>
 
-      <Box width="400px" align="center" color="white">
-        <Text fontFamily="exocet" mb={4}>
+      <Box width="400px" color="white" ml={4}>
+        <Text fontFamily="exocet" mb={4} fontSize={24} textAlign="center">
           Craftable Runewords
         </Text>
-        {craftable.map((runeword) => {
-          return <Text>{runeword}</Text>;
-        })}
+        <Box bg="#1D1D1D" p={1} mt={6}>
+          {craftable.map((runeword) => {
+            return (
+              <Box
+                bg="#090909"
+                p={2}
+                m={4}
+                cursor="pointer"
+                _hover={{ bg: "white" }}
+              >
+                <Text color="#C7B377">{runeword}</Text>
+              </Box>
+            );
+          })}
+        </Box>
       </Box>
     </Flex>
   );

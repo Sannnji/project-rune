@@ -22,7 +22,7 @@ export default function Navbar() {
       boxShadow="lg"
     >
       <Link to="/">
-        <Text fontFamily="exocet">Project Runes</Text>
+        <Text fontFamily="exocet">Rune Sack</Text>
       </Link>
 
       <Flex>

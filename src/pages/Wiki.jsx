@@ -6,7 +6,7 @@ import { RuneWiki } from "../components/wiki/runes/RuneWiki";
 export default function Wiki() {
   return (
     <>
-      <Tabs align="center" my={16} variant="unstyled">
+      <Tabs align="center" my={8} variant="unstyled">
         <TabList
           color="white"
           justifyContent="center"
