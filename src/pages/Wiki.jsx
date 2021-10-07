@@ -6,25 +6,24 @@ import { RuneWiki } from "../components/wiki/runes/RuneWiki";
 export default function Wiki() {
   return (
     <>
-      <Tabs align="center" my={8} variant="unstyled">
-        <TabList
-          color="white"
-          justifyContent="center"
-          width="50%"
-          fontFamily="exocet"
-        >
+      <Tabs my={8} colorScheme="red">
+        <TabList color="white" fontFamily="exocet">
           <Tab
+            p={0}
+            mr={4}
+            fontSize={24}
+            borderTopStartRadius="sm"
+            borderTopEndRadius="sm"
             _focus={{ outline: "none", boxShadow: "none" }}
-            _selected={{ color: "#950101", bg: "#090909" }}
-            
-            borderRadius="md"
           >
             Runewords
           </Tab>
           <Tab
+            p={0}
+            fontSize={24}
+            borderTopStartRadius="sm"
+            borderTopEndRadius="sm"
             _focus={{ outline: "none", boxShadow: "none" }}
-            _selected={{ color: "#950101", bg: "#090909" }}
-            borderRadius="md"
           >
             Runes
           </Tab>
