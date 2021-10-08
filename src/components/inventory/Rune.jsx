@@ -17,7 +17,7 @@ const CustomButton = ({ children, onClick }) => {
   );
 };
 
-export default function Runes({ rune, inventory, addRune, minusRune }) {
+export default function Rune({ rune, inventory, addRune, minusRune }) {
   return (
     <Flex bg="#1D1D1D" p={1} m={2} align="center" justifyContent="space-evenly">
       <Image src={process.env.PUBLIC_URL + `/${rune.image}`} />
@@ -26,7 +26,9 @@ export default function Runes({ rune, inventory, addRune, minusRune }) {
 
       <Flex flexDir="column" mr={2} align="center">
         <Text fontSize="small">qt.</Text>
-        <Text>{inventory[rune.name].quantity}</Text>
+        <Text color={inventory[rune.name].quantity > 0 ? "#C53030" : "white"}>
+          {inventory[rune.name].quantity}
+        </Text>
       </Flex>
 
       <Flex flexDir="column" fontSize="x-large">

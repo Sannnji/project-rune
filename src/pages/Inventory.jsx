@@ -14,7 +14,7 @@ import {
 import RUNEWORD_DATA from "../data/runewords.json";
 import RUNE_DATA from "../data/runes.json";
 
-import Runes from "../components/inventory/Runes";
+import Runes from "../components/inventory/Rune";
 import SideMenu from "../components/SideMenu";
 
 const craftable = [];
