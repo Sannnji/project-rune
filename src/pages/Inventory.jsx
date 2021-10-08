@@ -169,7 +169,7 @@ export default function Inventory() {
                             return (
                               <>
                                 <Text color="#797979">{runeword2.gear}</Text>
-                                <Text color="#C7B377">{runeword2.recipe}</Text>
+                                <Text color="#C7B377">'{runeword2.recipe}'</Text>
                                 <Text>
                                   Level Requirement: {runeword2.lvl_req}
                                 </Text>
