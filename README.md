@@ -1,3 +1,10 @@
+# D2 rune tool
+
+Add your runes into the magical rune sack and get a list of craftable runewords 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
