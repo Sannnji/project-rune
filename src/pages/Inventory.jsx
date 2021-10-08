@@ -68,26 +68,28 @@ export default function Inventory() {
     for (const property in RUNEWORD_DATA) {
       RUNEWORD_DATA[property].forEach((runeword) => {
         const recipe = runeword.recipe;
-        recipe.forEach((rune) => {
-          if (
-            state[rune] &&
-            !craftable.includes(runeword.name) &&
-            state[rune].quantity >= 1
-          ) {
-            const req_reqired = runeword.recipe.length;
-            let req_met = 0;
 
+        recipe.forEach((rune) => {
+          const req_reqired = recipe.length;
+          let req_met = 0;
+
+          if (state[rune].quantity >= 1 && !craftable.includes(runeword.name)) {
             //check if recipe req are met
-            runeword.recipe.forEach((rune) => {
-              if (state[rune] && state[rune].quantity >= 1) {
+            recipe.forEach((rune) => {
+              if (state[rune].quantity >= 1) {
                 req_met++;
               }
             });
 
             // if recipe are met and rune isn't already in craftable array
-            if (req_reqired === req_met && !craftable.includes(runeword.name)) {
+            if (req_reqired === req_met) {
               craftable.push(runeword.name);
             }
+          } else if (
+            state[rune].quantity === 0 &&
+            craftable.includes(runeword.name)
+          ) {
+            craftable.splice(runeword.name, 1);
           }
         });
       });
@@ -169,7 +171,9 @@ export default function Inventory() {
                             return (
                               <>
                                 <Text color="#797979">{runeword2.gear}</Text>
-                                <Text color="#C7B377">'{runeword2.recipe}'</Text>
+                                <Text color="#C7B377">
+                                  '{runeword2.recipe}'
+                                </Text>
                                 <Text>
                                   Level Requirement: {runeword2.lvl_req}
                                 </Text>
