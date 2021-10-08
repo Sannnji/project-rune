@@ -26,7 +26,7 @@ export default function Navbar() {
       </Link>
 
       <Flex>
-        <NavLink href="/inventory" linkName="Inventory" />
+        <NavLink href="/" linkName="Inventory" />
         <NavLink href="/wiki" linkName="Wiki" />
       </Flex>
     </Flex>
