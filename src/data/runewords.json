@@ -286,7 +286,7 @@
       ]
     },
     {
-      "name": "Dragon",
+      "name": "Dragon (Chest Ver.)",
       "gear": ["Chest Armor", "Shield"],
       "recipe": ["Sur", "Lo", "Sol"],
       "lvl_req": 61,
@@ -565,7 +565,7 @@
       ]
     },
     {
-      "name": "Dragon",
+      "name": "Dragon (Shield Ver.)",
       "gear": ["Shield", "Chest Armor"],
       "recipe": ["Sur", "Lo", "Sol"],
       "lvl_req": 61,

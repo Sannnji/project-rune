@@ -20,7 +20,7 @@ const CustomButton = ({ children, onClick }) => {
 export default function Rune({ rune, inventory, addRune, minusRune }) {
   return (
     <Flex bg="#1D1D1D" p={1} m={2} align="center" justifyContent="space-evenly">
-      <Image src={process.env.PUBLIC_URL + `/${rune.image}`} />
+      <Image src={process.env.PUBLIC_URL + rune.image} />
 
       <Text mx={2}>{rune.name}</Text>
 

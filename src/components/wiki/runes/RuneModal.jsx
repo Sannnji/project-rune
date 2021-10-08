@@ -28,7 +28,7 @@ export default function RuneModal({ rune, isOpen, onClose }) {
               </Text>
 
               <Image
-                src={process.env.PUBLIC_URL + `/${rune.image}`}
+                src={process.env.PUBLIC_URL + rune.image}
                 borderRadius="md"
                 my={4}
               />
