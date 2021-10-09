@@ -1,6 +1,8 @@
 import { Flex, Box, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+import User from "./User";
+
 const NavLink = ({ href, linkName }) => {
   return (
     <Box mx={2} fontFamily="AvQest">
@@ -20,14 +22,16 @@ export default function Navbar() {
       color="white"
       bg="#090909"
       boxShadow="lg"
+      align="center"
     >
       <Link to="/">
         <Text fontFamily="exocet">Rune Sack</Text>
       </Link>
 
-      <Flex>
+      <Flex       align="center">
         <NavLink href="/" linkName="Inventory" />
         <NavLink href="/wiki" linkName="Wiki" />
+        <User />
       </Flex>
     </Flex>
   );
