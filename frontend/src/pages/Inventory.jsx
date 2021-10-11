@@ -1,31 +1,20 @@
-import { useState } from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  SimpleGrid,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/react";
 
-import RUNEWORD_DATA from "../data/runewords.json";
-import RUNE_DATA from "../data/runes.json";
-
+import DatabaseService from "../services/database";
 import Runes from "../components/inventory/Rune";
 import SideMenu from "../components/SideMenu";
+import Craftable from "../components/inventory/Craftable";
 
 const craftable = [];
-const catagories = [];
-
-for (const tier in RUNE_DATA) {
-  catagories.push(tier);
-}
+// const catagories = [];
 
 export default function Inventory() {
-  // user inventory (has only Jah Ber Ith)
+  const [runes, setRunes] = useState();
+  const [runewords, setRunewords] = useState();
+  const [filter, setFilter] = useState();
+
+  // default inventory (has Jah, Ber, Ith)
   const [state, setState] = useState({
     El: { quantity: 0 },
     Eld: { quantity: 0 },
@@ -62,11 +51,35 @@ export default function Inventory() {
     Zod: { quantity: 0 },
   });
 
-  const [filter, setFilter] = useState(Object.keys(RUNE_DATA)[0]);
+  useEffect(() => {
+    retrieveRunewords();
+    retrieveRunes();
+  }, []);
+
+  const retrieveRunewords = () => {
+    DatabaseService.getRunewords()
+      .then((response) => {
+        setRunewords(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const retrieveRunes = () => {
+    DatabaseService.getRunes()
+      .then((response) => {
+        setFilter(Object.keys(response.data)[0]);
+        setRunes(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const checkCraftable = () => {
-    for (const property in RUNEWORD_DATA) {
-      RUNEWORD_DATA[property].forEach((runeword) => {
+    for (const property in runewords) {
+      runewords[property].forEach((runeword) => {
         const recipe = runeword.recipe;
 
         recipe.forEach((rune) => {
@@ -123,18 +136,23 @@ export default function Inventory() {
         <Text mb={4} fontFamily="exocet" fontSize={24}>
           Inventory
         </Text>
-        <SideMenu DATA={RUNE_DATA} setFilter={setFilter} currentFilter={filter}>
+        <SideMenu DATA={runes} setFilter={setFilter} currentFilter={filter}>
           <SimpleGrid columns={3}>
-            {RUNE_DATA[filter].map((rune) => {
-              return (
-                <Runes
-                  rune={rune}
-                  inventory={state}
-                  addRune={addRune}
-                  minusRune={minusRune}
-                />
-              );
-            })}
+            {runes ? (
+              runes[filter].map((rune, index) => {
+                return (
+                  <Runes
+                    key={index}
+                    rune={rune}
+                    inventory={state}
+                    addRune={addRune}
+                    minusRune={minusRune}
+                  />
+                );
+              })
+            ) : (
+              <div />
+            )}
           </SimpleGrid>
         </SideMenu>
       </Box>
@@ -143,53 +161,9 @@ export default function Inventory() {
         <Text fontFamily="exocet" mb={4} fontSize={24} textAlign="center">
           Craftable Runewords
         </Text>
+
         <Box bg="#1D1D1D" p={1} mt={6}>
-          <Accordion allowToggle>
-            {craftable.map((runeword, index) => {
-              return (
-                <>
-                  <AccordionItem key={index} border="none" bg="#090909" m={4}>
-                    <AccordionButton
-                      _focus={{ outline: "none", boxShadow: "none" }}
-                      position="relative"
-                    >
-                      <Box flex="1" textAlign="center" color="#C7B377">
-                        {runeword}
-                      </Box>
-                      <AccordionIcon position="absolute" right={4} />
-                    </AccordionButton>
-
-                    <AccordionPanel textAlign="center" mt={-2}>
-                      {Object.getOwnPropertyNames(RUNEWORD_DATA).map(
-                        // eslint-disable-next-line array-callback-return
-                        (property) => {
-                          const runeword2 = RUNEWORD_DATA[property].find(
-                            (rw) => rw.name === runeword
-                          );
-
-                          if (runeword2)
-                            return (
-                              <>
-                                <Text color="#797979">{runeword2.gear}</Text>
-                                <Text color="#C7B377">
-                                  '{runeword2.recipe}'
-                                </Text>
-                                <Text>
-                                  Level Requirement: {runeword2.lvl_req}
-                                </Text>
-                                {runeword2.stats.map((stat) => {
-                                  return <Text color="#6969FF">{stat}</Text>;
-                                })}
-                              </>
-                            );
-                        }
-                      )}
-                    </AccordionPanel>
-                  </AccordionItem>
-                </>
-              );
-            })}
-          </Accordion>
+          <Craftable craftable={craftable} />
         </Box>
       </Box>
     </Flex>

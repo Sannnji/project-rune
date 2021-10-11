@@ -3,7 +3,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { RunewordWiki } from "../components/wiki/runewords/RunewordWiki";
 import { RuneWiki } from "../components/wiki/runes/RuneWiki";
 
-export default function Wiki() {
+export default function Wiki({ data }) {
   return (
     <>
       <Tabs my={8} colorScheme="red">
@@ -31,10 +31,10 @@ export default function Wiki() {
 
         <TabPanels mt={8}>
           <TabPanel p={0}>
-            <RunewordWiki />
+            <RunewordWiki data={data} />
           </TabPanel>
           <TabPanel p={0}>
-            <RuneWiki />
+            <RuneWiki data={data} />
           </TabPanel>
         </TabPanels>
       </Tabs>
