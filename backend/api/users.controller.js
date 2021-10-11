@@ -12,4 +12,17 @@ export default class UsersController {
       res.status(500).json({ error: err.message });
     }
   }
+
+  static async apiLoginUser(req, res, next) {
+    try {
+      const username = req.body.username;
+      const password = req.body.password;
+      const response = await UsersDAO.loginUser(username, password);
+
+      res.json(response);
+    } catch (err) {
+      console.log(`api, ${err}`);
+      res.status(500).json({ error: err });
+    }
+  }
 }

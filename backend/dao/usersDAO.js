@@ -6,7 +6,7 @@ export default class UsersDAO {
       return;
     }
     try {
-      users = await conn.db(process.env.RUNE_NS).collection("users");
+      users = await conn.db(process.env.DB_NS).collection("users");
     } catch (err) {
       `Unable to establish a connection handle in usersDAO ${err}`;
     }
@@ -69,6 +69,17 @@ export default class UsersDAO {
     } catch (err) {
       console.error(`Unable to create user: ${err}`);
       return { error: err };
+    }
+  }
+
+  static async loginUser(username, password) {
+    try {
+      const user = await users.findOne({ username: username });
+      if (user.username == username) {
+        return user;
+      }
+    } catch (err) {
+      console.error(`Unable to login ${err}`);
     }
   }
 }
