@@ -8,9 +8,7 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 
-import RUNEWORD_DATA from "../../data/runewords.json"
-
-export default function Craftable({ craftable }) {
+export default function Craftable({ craftable, runewords }) {
   return (
     <Accordion allowToggle>
       {craftable.map((runeword, index) => {
@@ -28,10 +26,10 @@ export default function Craftable({ craftable }) {
               </AccordionButton>
 
               <AccordionPanel textAlign="center" mt={-2}>
-                {Object.getOwnPropertyNames(RUNEWORD_DATA).map(
+                {Object.getOwnPropertyNames(runewords).map(
                   // eslint-disable-next-line array-callback-return
                   (property) => {
-                    const runeword2 = RUNEWORD_DATA[property].find(
+                    const runeword2 = runewords[property].find(
                       (rw) => rw.name === runeword
                     );
 

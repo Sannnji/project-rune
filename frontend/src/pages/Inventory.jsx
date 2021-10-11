@@ -163,7 +163,11 @@ export default function Inventory() {
         </Text>
 
         <Box bg="#1D1D1D" p={1} mt={6}>
-          <Craftable craftable={craftable} />
+          {runewords ? (
+            <Craftable craftable={craftable} runewords={runewords} />
+          ) : (
+            <div />
+          )}
         </Box>
       </Box>
     </Flex>
