@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "yarn index",
+    "start": "node index",
     "test": "nodemon server"
   },
   "dependencies": {
