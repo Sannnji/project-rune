@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:9000",
+  baseURL: "https://rune-data.herokuapp.com/",
   headers: {
     "Content-type": "application/json",
   },
