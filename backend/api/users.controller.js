@@ -25,4 +25,14 @@ export default class UsersController {
       res.status(500).json({ error: err });
     }
   }
+
+  static async apiGetUserInventory(req, res, next) {
+    try {
+      const response = await UsersDAO.getUserInv(req.params.user);
+
+      res.json(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }

@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 let users;
 
 export default class UsersDAO {
@@ -75,11 +76,23 @@ export default class UsersDAO {
   static async loginUser(username, password) {
     try {
       const user = await users.findOne({ username: username });
-      if (user.username == username) {
-        return user;
+      if (user.username === username && user.password === password) {
+        const token = jwt.sign(user, "SECRET_KEY", { expiresIn: 1000 });
+        
+        return { token };
       }
     } catch (err) {
       console.error(`Unable to login ${err}`);
+    }
+  }
+
+  static async getUserInv(userParam) {
+    try {
+      const user = await users.findOne({ username: userParam });
+
+      return user.inventory;
+    } catch (err) {
+      console.log(err);
     }
   }
 }
