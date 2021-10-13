@@ -79,7 +79,7 @@ export default class UsersDAO {
       if (user.username === username && user.password === password) {
         const token = jwt.sign(user, process.env.SECRET);
 
-        return { token };
+        return { username, token };
       }
     } catch (err) {
       console.error(`Unable to login ${err}`);
