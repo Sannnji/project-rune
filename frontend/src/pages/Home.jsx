@@ -13,9 +13,11 @@ export default function Home() {
           runewords you can craft!
         </Text>
         <br />
-        <Text>Register to save your Inventory.(no email required)</Text>
+        <Text>Register to save your Inventory. (No Email Required!)</Text>
         <br />
-        <Text>This site is currently desktop only.</Text>
+        <Text>
+          This site meant to be viewed on larger screens. (Not Mobile Responsive)
+        </Text>
       </Box>
     </Box>
   );
