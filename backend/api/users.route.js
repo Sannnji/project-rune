@@ -10,5 +10,8 @@ router.route("/login").post(UsersController.apiLoginUser);
 router
   .route("/:user/inventory")
   .get(verifyUser, UsersController.apiGetUserInventory);
+router
+  .route("/:user/inventory/save")
+  .put(verifyUser, UsersController.apiSaveUserInventory);
 
 export default router;

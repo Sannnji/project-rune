@@ -77,7 +77,9 @@ export default class UsersDAO {
     try {
       const user = await users.findOne({ username: username });
       if (user.username === username && user.password === password) {
-        const token = jwt.sign(user, process.env.SECRET, { expiresIn: 1000 });
+        const token = jwt.sign(user, process.env.SECRET, {
+          expiresIn: 60 * 60 * 5,
+        });
         const inventory = user.inventory;
 
         return { username, token, inventory };
@@ -93,6 +95,19 @@ export default class UsersDAO {
       const user = await users.findOne({ username: userParam });
 
       return user.inventory;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  static async saveUserInv(username, inv) {
+    try {
+      const user = await users.findOneAndUpdate(
+        { username: username },
+        { $set: { inventory: inv } }
+      );
+
+      return user;
     } catch (err) {
       console.log(err);
     }

@@ -32,7 +32,22 @@ export default class UsersController {
 
       res.json(response);
     } catch (err) {
-      console.log(err);
+      console.log(`api, ${err}`);
+      res.status(500).json({ error: err });
+    }
+  }
+
+  static async apiSaveUserInventory(req, res, next) {
+    try {
+      const response = await UsersDAO.saveUserInv(
+        req.params.user,
+        req.body
+      );
+
+      res.json(response);
+    } catch (err) {
+      console.log(`api, ${err}`);
+      res.status(500).json({ error: err });
     }
   }
 }
