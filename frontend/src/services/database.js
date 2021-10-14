@@ -9,6 +9,14 @@ class DatabaseService {
     return http.post(`/user/login`, data);
   }
 
+  getInv(user, token) {
+    return http.get(`/user/${user}/inventory`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  }
+
   getRunes() {
     return http.get("/runes");
   }

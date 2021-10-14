@@ -1,15 +1,8 @@
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+import NavLink from "./NavLink";
 import User from "./User";
-
-const NavLink = ({ href, linkName }) => {
-  return (
-    <Box mx={2} fontFamily="AvQest">
-      <Link to={href}>{linkName}</Link>
-    </Box>
-  );
-};
 
 export default function Navbar() {
   return (
@@ -25,11 +18,11 @@ export default function Navbar() {
       align="center"
     >
       <Link to="/">
-        <Text fontFamily="exocet">Rune Sack</Text>
+        <Text fontFamily="exocet">Rune Tool</Text>
       </Link>
 
-      <Flex       align="center">
-        <NavLink href="/" linkName="Inventory" />
+      <Flex align="center">
+        <NavLink href="/inventory" linkName="Inventory" />
         <NavLink href="/wiki" linkName="Wiki" />
         <User />
       </Flex>

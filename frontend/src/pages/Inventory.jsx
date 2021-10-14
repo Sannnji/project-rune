@@ -5,56 +5,21 @@ import DatabaseService from "../services/database";
 import Runes from "../components/inventory/Rune";
 import SideMenu from "../components/SideMenu";
 import Craftable from "../components/inventory/Craftable";
+import VisitorData from "../visitorData.json";
 
 const craftable = [];
-// const catagories = [];
 
 export default function Inventory() {
   const [runes, setRunes] = useState();
   const [runewords, setRunewords] = useState();
   const [filter, setFilter] = useState();
 
-  // default inventory (has Jah, Ber, Ith)
-  const [state, setState] = useState({
-    El: { quantity: 0 },
-    Eld: { quantity: 0 },
-    Tir: { quantity: 0 },
-    Nef: { quantity: 0 },
-    Eth: { quantity: 0 },
-    Ith: { quantity: 3 },
-    Tal: { quantity: 0 },
-    Ral: { quantity: 0 },
-    Ort: { quantity: 0 },
-    Thul: { quantity: 0 },
-    Amn: { quantity: 0 },
-    Sol: { quantity: 0 },
-    Shael: { quantity: 0 },
-    Dol: { quantity: 0 },
-    Hel: { quantity: 0 },
-    Io: { quantity: 0 },
-    Lum: { quantity: 0 },
-    Ko: { quantity: 0 },
-    Fal: { quantity: 0 },
-    Lem: { quantity: 0 },
-    Pul: { quantity: 0 },
-    Um: { quantity: 0 },
-    Mal: { quantity: 0 },
-    Ist: { quantity: 0 },
-    Gul: { quantity: 0 },
-    Vex: { quantity: 0 },
-    Ohm: { quantity: 0 },
-    Lo: { quantity: 0 },
-    Sur: { quantity: 0 },
-    Ber: { quantity: 1 },
-    Jah: { quantity: 4 },
-    Cham: { quantity: 0 },
-    Zod: { quantity: 0 },
-  });
+  const pastUser = JSON.parse(localStorage.getItem("user"));
 
-  useEffect(() => {
-    retrieveRunewords();
-    retrieveRunes();
-  }, []);
+  // default inventory (has Jah, Ber, Ith)
+  const [state, setState] = useState(
+    pastUser ? pastUser.inventory : VisitorData
+  );
 
   const retrieveRunewords = () => {
     DatabaseService.getRunewords()
@@ -108,7 +73,6 @@ export default function Inventory() {
       });
     }
   };
-  checkCraftable();
 
   const addRune = (rune) => {
     setState((prevState) => {
@@ -129,6 +93,13 @@ export default function Inventory() {
     });
     checkCraftable();
   };
+
+  useEffect(() => {
+    retrieveRunewords();
+    retrieveRunes();
+  }, []);
+
+  checkCraftable();
 
   return (
     <Flex flexDir="row" mt={8}>
