@@ -118,14 +118,14 @@ export default function Inventory() {
                     inv
                   )
                     .then((response) => {
-                      console.log(response);
                       pastUser.inventory = inv;
                       localStorage.setItem("user", JSON.stringify(pastUser));
+                      alert("Inventory saved!");
                     })
                     .catch((err) => {
                       console.log(err);
                     })
-                : alert("You are not logged in");
+                : alert("You are not logged in.");
             }}
           >
             Save Inventory
