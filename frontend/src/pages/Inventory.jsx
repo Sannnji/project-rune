@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Text, SimpleGrid, Button } from "@chakra-ui/react";
 
 import DatabaseService from "../services/database";
 import Runes from "../components/inventory/Rune";
@@ -17,9 +17,7 @@ export default function Inventory() {
   const pastUser = JSON.parse(localStorage.getItem("user"));
 
   // default inventory (has Jah, Ber, Ith)
-  const [state, setState] = useState(
-    pastUser ? pastUser.inventory : VisitorData
-  );
+  const [inv, setInv] = useState(pastUser ? pastUser.inventory : VisitorData);
 
   const retrieveRunewords = () => {
     DatabaseService.getRunewords()
@@ -51,10 +49,10 @@ export default function Inventory() {
           const req_reqired = recipe.length;
           let req_met = 0;
 
-          if (state[rune].quantity >= 1 && !craftable.includes(runeword.name)) {
+          if (inv[rune].quantity >= 1 && !craftable.includes(runeword.name)) {
             //check if recipe req are met
             recipe.forEach((rune) => {
-              if (state[rune].quantity >= 1) {
+              if (inv[rune].quantity >= 1) {
                 req_met++;
               }
             });
@@ -64,7 +62,7 @@ export default function Inventory() {
               craftable.push(runeword.name);
             }
           } else if (
-            state[rune].quantity === 0 &&
+            inv[rune].quantity === 0 &&
             craftable.includes(runeword.name)
           ) {
             craftable.splice(runeword.name, 1);
@@ -75,8 +73,8 @@ export default function Inventory() {
   };
 
   const addRune = (rune) => {
-    setState((prevState) => {
-      state[rune].quantity += 1;
+    setInv((prevState) => {
+      inv[rune].quantity += 1;
       return {
         ...prevState,
       };
@@ -85,8 +83,8 @@ export default function Inventory() {
   };
 
   const minusRune = (rune) => {
-    setState((prevState) => {
-      state[rune].quantity -= 1;
+    setInv((prevState) => {
+      inv[rune].quantity -= 1;
       return {
         ...prevState,
       };
@@ -104,9 +102,36 @@ export default function Inventory() {
   return (
     <Flex flexDir="row" mt={8}>
       <Box color="white">
-        <Text mb={4} fontFamily="exocet" fontSize={24}>
-          Inventory
-        </Text>
+        <Flex>
+          <Text mb={4} fontFamily="exocet" fontSize={24}>
+            Inventory
+          </Text>
+          <Button
+            bg="#090909"
+            ml={7}
+            _hover={{ color: "#C7B377", bg: "white" }}
+            onClick={() => {
+              pastUser
+                ? DatabaseService.saveInv(
+                    pastUser.username,
+                    pastUser.token,
+                    inv
+                  )
+                    .then((response) => {
+                      console.log(response);
+                      pastUser.inventory = inv;
+                      localStorage.setItem("user", JSON.stringify(pastUser));
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    })
+                : alert("You are not logged in");
+            }}
+          >
+            Save Inventory
+          </Button>
+        </Flex>
+
         <SideMenu DATA={runes} setFilter={setFilter} currentFilter={filter}>
           <SimpleGrid columns={3}>
             {runes ? (
@@ -115,7 +140,7 @@ export default function Inventory() {
                   <Runes
                     key={index}
                     rune={rune}
-                    inventory={state}
+                    inventory={inv}
                     addRune={addRune}
                     minusRune={minusRune}
                   />

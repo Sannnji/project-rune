@@ -9,20 +9,20 @@ class DatabaseService {
     return http.post(`/user/login`, data);
   }
 
-  getInv(user, token) {
-    return http.get(`/user/${user}/inventory`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  }
-
   getRunes() {
     return http.get("/runes");
   }
 
   getRunewords() {
     return http.get("/runewords");
+  }
+
+  saveInv(user, token, inv) {
+    return http.put(`/user/${user}/inventory/save`, inv, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
   }
 }
 
