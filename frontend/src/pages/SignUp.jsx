@@ -38,7 +38,7 @@ export default function SignUp() {
           <FormLabel mt={2}>Password</FormLabel>
           <Input
             name="password"
-            type="text"
+            type="password"
             borderColor="white"
             value={formik.values.password}
             onChange={formik.handleChange}
@@ -47,7 +47,7 @@ export default function SignUp() {
           <FormLabel mt={2}>Confirm Password</FormLabel>
           <Input
             name="confirmPassword"
-            type="text"
+            type="password"
             borderColor="white"
             value={formik.values.confirmPassword}
             onChange={formik.handleChange}

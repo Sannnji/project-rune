@@ -37,7 +37,7 @@ export default function SignIn() {
           <FormLabel mt={2}>Password</FormLabel>
           <Input
             name="password"
-            type="text"
+            type="password"
             borderColor="white"
             value={formik.values.password}
             onChange={formik.handleChange}
