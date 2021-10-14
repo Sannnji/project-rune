@@ -77,12 +77,14 @@ export default class UsersDAO {
     try {
       const user = await users.findOne({ username: username });
       if (user.username === username && user.password === password) {
-        const token = jwt.sign(user, process.env.SECRET);
+        const token = jwt.sign(user, process.env.SECRET, { expiresIn: 1000 });
+        const inventory = user.inventory;
 
-        return { username, token };
+        return { username, token, inventory };
       }
     } catch (err) {
       console.error(`Unable to login ${err}`);
+      return { error: err };
     }
   }
 
