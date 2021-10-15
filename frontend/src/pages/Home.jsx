@@ -5,7 +5,7 @@ export default function Home() {
     <Box color="white" align="center" width="100%">
       {/* <Image src={diabloPic} position="absolute" left={0} zIndex={-1} /> */}
       <Heading mt={20} color="#C7B377" fontFamily="AvQest">
-        🔥Welcome To Rune Tool!🔥
+        🔥Welcome To Rune Tool🔥
       </Heading>
       <Box
         mt={4}
