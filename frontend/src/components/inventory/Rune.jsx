@@ -3,9 +3,10 @@ import { Box, Flex, Text, Image } from "@chakra-ui/react";
 const CustomButton = ({ children, onClick }) => {
   return (
     <Box
-      h="28px"
-      w="28px"
+      h="24px"
+      w="24px"
       bg="#141414"
+      position="relative"
       textAlign="center"
       cursor="pointer"
       lineHeight="1.25"
@@ -19,33 +20,42 @@ const CustomButton = ({ children, onClick }) => {
 
 export default function Rune({ rune, inventory, addRune, minusRune }) {
   return (
-    <Flex bg="#1D1D1D" p={1} m={2} align="center" justifyContent="space-evenly">
-      <Image src={process.env.PUBLIC_URL + rune.image} />
+    <Flex
+      p={1}
+      m={2}
+      width="75px"
+      bg="#1D1D1D"
+      align="center"
+      flexDir="column"
+      justifyContent="space-evenly"
+    >
+      <Image src={process.env.PUBLIC_URL + rune.image} width="50%" />
 
-      <Text mx={2}>{rune.name}</Text>
+      <Text>{rune.name}</Text>
 
-      <Flex flexDir="column" mr={2} align="center">
-        <Text fontSize="small">qt.</Text>
-        <Text color={inventory[rune.name].quantity > 0 ? "#C53030" : "white"}>
-          {inventory[rune.name].quantity}
-        </Text>
-      </Flex>
-
-      <Flex flexDir="column" fontSize="x-large">
-        <CustomButton
-          onClick={() => {
-            addRune(rune.name);
-          }}
-        >
-          <Text>+</Text>
-        </CustomButton>
-
+      <Flex fontSize="x-large" align="center">
         <CustomButton
           onClick={() => {
             minusRune(rune.name);
           }}
         >
           <Text>-</Text>
+        </CustomButton>
+
+        <Text
+          color={inventory[rune.name].quantity > 0 ? "#C53030" : "white"}
+          mx={1}
+          fontSize="sm"
+        >
+          {inventory[rune.name].quantity}
+        </Text>
+
+        <CustomButton
+          onClick={() => {
+            addRune(rune.name);
+          }}
+        >
+          <Text>+</Text>
         </CustomButton>
       </Flex>
     </Flex>

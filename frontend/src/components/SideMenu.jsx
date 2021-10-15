@@ -8,19 +8,15 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
   }
 
   return (
-    <Flex
-      fontFamily="AvQest"
-      color="white"
-      justifyContent={{ base: "space-evenly", md: "normal" }}
-    >
-      <Flex flexDir="column" align="baseline" mr={{ base: 4, md: 12 }}>
+    <Flex fontFamily="AvQest" color="white" flexDir="row">
+      <Flex flexDir="column" align="baseline" mr={{ base: 2, md: 12 }}>
         {filters.map((filter, index) => {
           return (
             <Text
               key={index}
               mb={2}
               textAlign="start"
-              fontSize="22px"
+              fontSize={{ base: "normal", md: "22px" }}
               color={currentFilter === filter ? "#C53030" : "white"}
               onClick={() => {
                 setFilter(filter);

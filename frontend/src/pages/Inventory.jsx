@@ -92,6 +92,20 @@ export default function Inventory() {
     checkCraftable();
   };
 
+  const handleSave = () => {
+    pastUser
+      ? DatabaseService.saveInv(pastUser.username, pastUser.token, inv)
+          .then((response) => {
+            pastUser.inventory = inv;
+            localStorage.setItem("user", JSON.stringify(pastUser));
+            alert("Inventory saved!");
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      : alert("You are not logged in.");
+  };
+
   useEffect(() => {
     retrieveRunewords();
     retrieveRunes();
@@ -100,72 +114,75 @@ export default function Inventory() {
   checkCraftable();
 
   return (
-    <Flex flexDir="row" mt={8}>
-      <Box color="white">
-        <Flex>
-          <Text mb={4} fontFamily="exocet" fontSize={24}>
-            Inventory
-          </Text>
-          <Button
-            bg="#090909"
-            ml={7}
-            _hover={{ color: "#C7B377", bg: "white" }}
-            onClick={() => {
-              pastUser
-                ? DatabaseService.saveInv(
-                    pastUser.username,
-                    pastUser.token,
-                    inv
-                  )
-                    .then((response) => {
-                      pastUser.inventory = inv;
-                      localStorage.setItem("user", JSON.stringify(pastUser));
-                      alert("Inventory saved!");
-                    })
-                    .catch((err) => {
-                      console.log(err);
-                    })
-                : alert("You are not logged in.");
-            }}
-          >
-            Save Inventory
-          </Button>
-        </Flex>
+    <Flex
+      flexDir={{ base: "column", lg: "row" }}
+      align={{ base: "center", lg: "normal" }}
+      mt={8}
+    >
+      {/*INVENTORY SECTION*/}
+      <Flex color="white" flexDir={{ base: "column", lg: "row" }}>
+        <Box>
+          <Flex>
+            <Text mb={4} fontFamily="exocet" fontSize={24}>
+              Inventory
+            </Text>
+            <Button
+              bg="#090909"
+              ml={7}
+              _hover={{ color: "#C7B377", bg: "white" }}
+              onClick={() => handleSave()}
+            >
+              Save Inventory
+            </Button>
+          </Flex>
 
-        <SideMenu DATA={runes} setFilter={setFilter} currentFilter={filter}>
-          <SimpleGrid columns={3}>
-            {runes ? (
-              runes[filter].map((rune, index) => {
-                return (
-                  <Runes
-                    key={index}
-                    rune={rune}
-                    inventory={inv}
-                    addRune={addRune}
-                    minusRune={minusRune}
-                  />
-                );
-              })
+          <SideMenu DATA={runes} setFilter={setFilter} currentFilter={filter}>
+            <SimpleGrid columns={{ base: 4, md: 5, lg: 4, xl: 6 }}>
+              {runes ? (
+                runes[filter].map((rune, index) => {
+                  return (
+                    <Runes
+                      key={index}
+                      rune={rune}
+                      inventory={inv}
+                      addRune={addRune}
+                      minusRune={minusRune}
+                    />
+                  );
+                })
+              ) : (
+                <div />
+              )}
+            </SimpleGrid>
+          </SideMenu>
+        </Box>
+
+        {/*CRAFTABLE SECTION*/}
+        <Box
+          color="white"
+          width={{ base: "100%", lg: "450px" }}
+          ml={{ base: 0, lg: 4 }}
+          my={{ base: 12, lg: 0 }}
+          justifyContent={{ base: "start" }}
+        >
+          <Text
+            fontFamily="exocet"
+            mb={4}
+            fontSize={24}
+            textAlign={{ base: "left", lg: "center" }}
+          >
+            Craftable Runewords
+          </Text>
+
+          <Box bg="#1D1D1D" p={1} mt={6}>
+            {runewords ? (
+              <Craftable craftable={craftable} runewords={runewords} />
             ) : (
               <div />
             )}
-          </SimpleGrid>
-        </SideMenu>
-      </Box>
-
-      <Box width="400px" color="white" ml={4}>
-        <Text fontFamily="exocet" mb={4} fontSize={24} textAlign="center">
-          Craftable Runewords
-        </Text>
-
-        <Box bg="#1D1D1D" p={1} mt={6}>
-          {runewords ? (
-            <Craftable craftable={craftable} runewords={runewords} />
-          ) : (
-            <div />
-          )}
+          </Box>
         </Box>
-      </Box>
+      </Flex>
     </Flex>
   );
 }
