@@ -7,9 +7,9 @@ export default class UsersController {
       const password = req.body.password;
 
       const response = await UsersDAO.createUser(username, password);
-      res.json({ status: "success" });
+      res.json(response);
     } catch (err) {
-      res.status(500).json({ error: err.message });
+      res.status(500).json({ error: err });
     }
   }
 
@@ -39,10 +39,7 @@ export default class UsersController {
 
   static async apiSaveUserInventory(req, res, next) {
     try {
-      const response = await UsersDAO.saveUserInv(
-        req.params.user,
-        req.body
-      );
+      const response = await UsersDAO.saveUserInv(req.params.user, req.body);
 
       res.json(response);
     } catch (err) {

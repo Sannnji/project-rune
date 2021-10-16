@@ -15,58 +15,65 @@ export default class UsersDAO {
 
   static async createUser(username, password) {
     try {
-      const newUser = {
-        username: username,
-        password: password,
-        inventory: {
-          runes: {
-            El: { quantity: 0 },
-            Eld: { quantity: 0 },
-            Tir: { quantity: 0 },
-            Nef: { quantity: 0 },
-            Eth: { quantity: 0 },
-            Ith: { quantity: 0 },
-            Tal: { quantity: 0 },
-            Ral: { quantity: 0 },
-            Ort: { quantity: 0 },
-            Thul: { quantity: 0 },
-            Amn: { quantity: 0 },
-            Sol: { quantity: 0 },
-            Shael: { quantity: 0 },
-            Dol: { quantity: 0 },
-            Hel: { quantity: 0 },
-            Io: { quantity: 0 },
-            Lum: { quantity: 0 },
-            Ko: { quantity: 0 },
-            Fal: { quantity: 0 },
-            Lem: { quantity: 0 },
-            Pul: { quantity: 0 },
-            Um: { quantity: 0 },
-            Mal: { quantity: 0 },
-            Ist: { quantity: 0 },
-            Gul: { quantity: 0 },
-            Vex: { quantity: 0 },
-            Ohm: { quantity: 0 },
-            Lo: { quantity: 0 },
-            Sur: { quantity: 0 },
-            Ber: { quantity: 0 },
-            Jah: { quantity: 0 },
-            Cham: { quantity: 0 },
-            Zod: { quantity: 0 },
-          },
-          gems: {
-            Topaz: {
-              chipped_topaz: { quantity: 0 },
-              flawed_topaz: { quantity: 0 },
-              topaz: { quantity: 0 },
-              flawless_topaz: { quantity: 0 },
-              perfect_topaz: { quantity: 0 },
+      const user = await users.findOne({ username: username });
+      if (user) {
+        return { error: "Username already taken" };
+      } else {
+        const newUser = {
+          username: username,
+          password: password,
+          inventory: {
+            runes: {
+              El: { quantity: 0 },
+              Eld: { quantity: 0 },
+              Tir: { quantity: 0 },
+              Nef: { quantity: 0 },
+              Eth: { quantity: 0 },
+              Ith: { quantity: 0 },
+              Tal: { quantity: 0 },
+              Ral: { quantity: 0 },
+              Ort: { quantity: 0 },
+              Thul: { quantity: 0 },
+              Amn: { quantity: 0 },
+              Sol: { quantity: 0 },
+              Shael: { quantity: 0 },
+              Dol: { quantity: 0 },
+              Hel: { quantity: 0 },
+              Io: { quantity: 0 },
+              Lum: { quantity: 0 },
+              Ko: { quantity: 0 },
+              Fal: { quantity: 0 },
+              Lem: { quantity: 0 },
+              Pul: { quantity: 0 },
+              Um: { quantity: 0 },
+              Mal: { quantity: 0 },
+              Ist: { quantity: 0 },
+              Gul: { quantity: 0 },
+              Vex: { quantity: 0 },
+              Ohm: { quantity: 0 },
+              Lo: { quantity: 0 },
+              Sur: { quantity: 0 },
+              Ber: { quantity: 0 },
+              Jah: { quantity: 0 },
+              Cham: { quantity: 0 },
+              Zod: { quantity: 0 },
+            },
+            gems: {
+              Topaz: {
+                chipped_topaz: { quantity: 0 },
+                flawed_topaz: { quantity: 0 },
+                topaz: { quantity: 0 },
+                flawless_topaz: { quantity: 0 },
+                perfect_topaz: { quantity: 0 },
+              },
             },
           },
-        },
-      };
-
-      return await users.insertOne(newUser);
+        };
+        return await users.insertOne(newUser).then((user, err) => {
+          if (err) console.log(err);
+          return { status: "success" };
+        });
+      }
     } catch (err) {
       console.error(`Unable to create user: ${err}`);
       return { error: err };
@@ -76,13 +83,19 @@ export default class UsersDAO {
   static async loginUser(username, password) {
     try {
       const user = await users.findOne({ username: username });
-      if (user.username === username && user.password === password) {
-        const token = jwt.sign(user, process.env.SECRET, {
-          expiresIn: 60 * 60 * 5,
-        });
-        const inventory = user.inventory;
+      if (user) {
+        if (user.password === password) {
+          const token = jwt.sign(user, process.env.SECRET, {
+            expiresIn: 60 * 60 * 5,
+          });
+          const inventory = user.inventory;
 
-        return { username, token, inventory };
+          return { username, token, inventory };
+        }
+
+        return user.username;
+      } else if (user === null) {
+        return { error: "Invalid credentials" };
       }
     } catch (err) {
       console.error(`Unable to login ${err}`);
