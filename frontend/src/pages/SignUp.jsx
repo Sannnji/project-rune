@@ -1,5 +1,5 @@
 import { Box, Text, Button, Input, Center } from "@chakra-ui/react";
-import { FormLabel } from "@chakra-ui/form-control";
+import { FormLabel, FormControl } from "@chakra-ui/form-control";
 
 import { useFormik } from "formik";
 import { Link, useHistory } from "react-router-dom";
@@ -37,36 +37,40 @@ export default function SignUp() {
       <Text color="white">{message}</Text>
       <Box color="#C7B377" p={4} borderRadius="md" textAlign="center">
         <form onSubmit={formik.handleSubmit}>
-          <FormLabel>Username</FormLabel>
-          <Input
-            name="username"
-            type="text"
-            borderColor="white"
-            value={formik.values.username}
-            onChange={formik.handleChange}
-          />
+          <FormControl isRequired>
+            <FormLabel>Username</FormLabel>
+            <Input
+              name="username"
+              type="text"
+              isRequired={true}
+              borderColor="white"
+              value={formik.values.username}
+              onChange={formik.handleChange}
+            />
 
-          <FormLabel mt={2}>Password</FormLabel>
-          <Input
-            name="password"
-            type="password"
-            borderColor="white"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-          />
+            <FormLabel mt={2}>Password</FormLabel>
+            <Input
+              name="password"
+              type="password"
+              isRequired={true}
+              borderColor="white"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+            />
 
-          <FormLabel mt={2}>Confirm Password</FormLabel>
-          <Input
-            name="confirmPassword"
-            type="password"
-            borderColor="white"
-            value={formik.values.confirmPassword}
-            onChange={formik.handleChange}
-          />
+            <FormLabel mt={2}>Confirm Password</FormLabel>
+            <Input
+              name="confirmPassword"
+              type="password"
+              borderColor="white"
+              value={formik.values.confirmPassword}
+              onChange={formik.handleChange}
+            />
 
-          <Button type="submit" mt={4} w="100%">
-            Sign Up
-          </Button>
+            <Button type="submit" mt={4} w="100%">
+              Sign Up
+            </Button>
+          </FormControl>
         </form>
 
         <Text my={4}>or</Text>
