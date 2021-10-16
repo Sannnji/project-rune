@@ -28,7 +28,7 @@ function useProvideAuth() {
         setUser({
           username: username,
           token: token,
-          inventory: inventory,
+          inventory: inventory.runes,
         });
         return {
           user,
