@@ -37,9 +37,9 @@ function useProvideAuth() {
       .catch((err) => console.log(err));
   };
 
-  const signup = (username, password) => {
+  const signUp = (username, password) => {
     DatabaseService.signup(username, password).then((response) => {
-      console.log(response.data);
+      return response;
     });
   };
 
@@ -62,7 +62,7 @@ function useProvideAuth() {
   return {
     user,
     login,
-    signup,
+    signUp,
     signOut,
   };
 }

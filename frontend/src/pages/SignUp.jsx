@@ -5,10 +5,19 @@ import { useFormik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 
 import { useAuth } from "../services/useAuth";
+import { useState } from "react";
 
 export default function SignUp() {
   const auth = useAuth();
   let history = useHistory();
+
+  const [message, setMessage] = useState("");
+
+  const signUp = (values) => {
+    auth.signUp(values);
+    setMessage("Sign up successful you will be redirected to the home page");
+    setTimeout(() => history.push("/"), 5000);
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -17,13 +26,15 @@ export default function SignUp() {
       confirmPassword: "",
     },
     onSubmit: (values) => {
-      auth.login(values);
-      history.push("/");
+      values.password === values.confirmPassword
+        ? signUp(values)
+        : setMessage("Your passwords do not match");
     },
   });
 
   return (
     <Center mt={16} flexDir="column">
+      <Text color="white">{message}</Text>
       <Box color="#C7B377" p={4} borderRadius="md" textAlign="center">
         <form onSubmit={formik.handleSubmit}>
           <FormLabel>Username</FormLabel>
