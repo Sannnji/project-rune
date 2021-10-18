@@ -4,11 +4,16 @@ export default function Home() {
   return (
     <Box color="white" align="center" width="100%">
       {/* <Image src={diabloPic} position="absolute" left={0} zIndex={-1} /> */}
-      <Heading mt={20} color="#C7B377" fontFamily="AvQest">
+      <Heading
+        mt={20}
+        color="#C7B377"
+        fontFamily="AvQest"
+        fontSize={{ base: "x-large", lg: "xxx-large" }}
+      >
         🔥Welcome To Rune Tool🔥
       </Heading>
       <Box
-        mt={4}
+        mt={8}
         p={4}
         border="1px"
         borderColor="#C7B377"
