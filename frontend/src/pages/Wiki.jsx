@@ -7,7 +7,11 @@ export default function Wiki({ data }) {
   return (
     <>
       <Tabs my={8} colorScheme="red">
-        <TabList color="white" fontFamily="exocet">
+        <TabList
+          color="white"
+          fontFamily="exocet"
+          justifyContent={{ base: "center", lg: "normal" }}
+        >
           <Tab
             p={0}
             mr={4}

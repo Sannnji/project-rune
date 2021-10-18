@@ -8,7 +8,12 @@ export default function SideMenu({ children, DATA, setFilter, currentFilter }) {
   }
 
   return (
-    <Flex fontFamily="AvQest" color="white" flexDir="row">
+    <Flex
+      fontFamily="AvQest"
+      color="white"
+      flexDir="row"
+      justifyContent={{ base: "center", lg: "normal" }}
+    >
       <Flex flexDir="column" align="baseline" mr={{ base: 2, md: 12 }}>
         {filters.map((filter, index) => {
           return (
