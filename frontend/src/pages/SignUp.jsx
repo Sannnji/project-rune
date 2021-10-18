@@ -1,22 +1,28 @@
+import { useState } from "react";
 import { Box, Text, Button, Input, Center } from "@chakra-ui/react";
 import { FormLabel, FormControl } from "@chakra-ui/form-control";
 
 import { useFormik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 
-import { useAuth } from "../services/useAuth";
-import { useState } from "react";
+import DatabaseService from "../services/database";
 
 export default function SignUp() {
-  const auth = useAuth();
   let history = useHistory();
 
   const [message, setMessage] = useState("");
 
   const signUp = (values) => {
-    auth.signUp(values);
-    setMessage("Sign up successful you will be redirected to the home page");
-    setTimeout(() => history.push("/"), 5000);
+    DatabaseService.signup(values).then((response) => {
+      if (response.data.error) {
+        setMessage(response.data.error);
+      } else {
+        setMessage(
+          "Sign up successful you will be redirected to the home page"
+        );
+        setTimeout(() => history.push("/"), 3000);
+      }
+    });
   };
 
   const formik = useFormik({
@@ -34,7 +40,7 @@ export default function SignUp() {
 
   return (
     <Center mt={16} flexDir="column">
-      <Text color="white">{message}</Text>
+      <Text color="#C53030">{message}</Text>
       <Box color="#C7B377" p={4} borderRadius="md" textAlign="center">
         <form onSubmit={formik.handleSubmit}>
           <FormControl isRequired>

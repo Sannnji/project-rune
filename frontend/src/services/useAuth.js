@@ -17,8 +17,10 @@ function useProvideAuth() {
   const [user, setUser] = useState(null);
 
   const login = (username, password) => {
-    DatabaseService.login(username, password)
-      .then((response) => {
+    return DatabaseService.login(username, password).then((response) => {
+      if (response.data.error) {
+        return response;
+      } else {
         const token = response.data.token;
         const username = response.data.username;
         const inventory = response.data.inventory;
@@ -30,16 +32,8 @@ function useProvideAuth() {
           token: token,
           inventory: inventory.runes,
         });
-        return {
-          user,
-        };
-      })
-      .catch((err) => console.log(err));
-  };
-
-  const signUp = (username, password) => {
-    DatabaseService.signup(username, password).then((response) => {
-      return response;
+        return response;
+      }
     });
   };
 
@@ -62,7 +56,6 @@ function useProvideAuth() {
   return {
     user,
     login,
-    signUp,
     signOut,
   };
 }
