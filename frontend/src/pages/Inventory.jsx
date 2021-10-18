@@ -137,7 +137,7 @@ export default function Inventory() {
           </Flex>
 
           <SideMenu DATA={runes} setFilter={setFilter} currentFilter={filter}>
-            <SimpleGrid columns={{ base: 4, md: 5, lg: 4, xl: 6 }}>
+            <SimpleGrid columns={{ base: 3, md: 5, lg: 4, xl: 6 }}>
               {runes ? (
                 runes[filter].map((rune, index) => {
                   return (
