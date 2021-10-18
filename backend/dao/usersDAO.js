@@ -17,7 +17,7 @@ export default class UsersDAO {
     try {
       const user = await users.findOne({ username: username });
       if (user) {
-        return { error: "Username already taken" };
+        throw "Username already taken";
       } else {
         const newUser = {
           username: username,
@@ -70,7 +70,7 @@ export default class UsersDAO {
           },
         };
         return await users.insertOne(newUser).then((user, err) => {
-          if (err) console.log(err);
+          if (err) throw err;
           return { status: "success" };
         });
       }
@@ -91,11 +91,10 @@ export default class UsersDAO {
           const inventory = user.inventory;
 
           return { username, token, inventory };
-        }
-
-        return user.username;
-      } else if (user === null) {
-        return { error: "Invalid credentials" };
+        } else throw "Invalid credentials";
+        
+      } else {
+        throw "Invalid credentials";
       }
     } catch (err) {
       console.error(`Unable to login ${err}`);
