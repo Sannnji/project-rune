@@ -1,4 +1,4 @@
-import { Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Text, Box, IconButton } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
@@ -32,7 +32,7 @@ export default function Navbar() {
           onClick={() => handleToggle()}
           cursor="pointer"
         >
-          <i class="fas fa-bars"></i>
+          <IconButton className="fas fa-bars" color="#C7B377" />
         </Box>
 
         <Box

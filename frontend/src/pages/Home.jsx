@@ -2,10 +2,9 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <Box color="white" align="center" width="100%">
+    <Box align="center" width="100%" my={24}>
       {/* <Image src={diabloPic} position="absolute" left={0} zIndex={-1} /> */}
       <Heading
-        mt={20}
         color="#C7B377"
         fontFamily="AvQest"
         fontSize={{ base: "x-large", lg: "xxx-large" }}
