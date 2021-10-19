@@ -58,15 +58,15 @@ export default class UsersDAO {
               Cham: { quantity: 0 },
               Zod: { quantity: 0 },
             },
-            gems: {
-              Topaz: {
-                chipped_topaz: { quantity: 0 },
-                flawed_topaz: { quantity: 0 },
-                topaz: { quantity: 0 },
-                flawless_topaz: { quantity: 0 },
-                perfect_topaz: { quantity: 0 },
-              },
-            },
+            // gems: {
+            //   Topaz: {
+            //     chipped_topaz: { quantity: 0 },
+            //     flawed_topaz: { quantity: 0 },
+            //     topaz: { quantity: 0 },
+            //     flawless_topaz: { quantity: 0 },
+            //     perfect_topaz: { quantity: 0 },
+            //   },
+            // },
           },
         };
         return await users.insertOne(newUser).then((user, err) => {
@@ -92,7 +92,6 @@ export default class UsersDAO {
 
           return { username, token, inventory };
         } else throw "Invalid credentials";
-        
       } else {
         throw "Invalid credentials";
       }
@@ -116,7 +115,7 @@ export default class UsersDAO {
     try {
       const user = await users.findOneAndUpdate(
         { username: username },
-        { $set: { inventory: inv } }
+        { $set: { inventory: { runes: { inv } } } }
       );
 
       return user;
