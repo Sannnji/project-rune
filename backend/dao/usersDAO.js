@@ -115,7 +115,7 @@ export default class UsersDAO {
     try {
       const user = await users.findOneAndUpdate(
         { username: username },
-        { $set: { inventory: { runes: { inv } } } }
+        { $set: { inventory: { runes: inv } } }
       );
 
       return user;
