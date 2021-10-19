@@ -8,7 +8,10 @@ export default function Footer() {
     <Box
       as="footer"
       role="contentinfo"
-      py={12}
+      position="absolute"
+      bottom={0}
+      width="100%"
+      height="2.5rem"
       px={{ base: 4, md: 12 }}
     >
       <Stack direction="row" spacing="4" align="center" justify="space-between">
