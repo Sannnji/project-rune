@@ -17,7 +17,7 @@ export default function Inventory() {
   const pastUser = JSON.parse(localStorage.getItem("user"));
 
   // default inventory (has Jah, Ber, Ith)
-  const [inv, setInv] = useState(pastUser ? pastUser.inventory : VisitorData);
+  const [inv, setInv] = useState(pastUser ? pastUser.inventory.runes : VisitorData);
 
   const retrieveRunewords = () => {
     DatabaseService.getRunewords()
