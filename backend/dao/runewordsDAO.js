@@ -3,7 +3,7 @@ let runewords;
 export default class RunewordsDAO {
   static async injectDB(conn) {
     if (runewords) {
-      retern;
+      return;
     }
     try {
       runewords = await conn.db(process.env.DB_NS).collection("runewords");
